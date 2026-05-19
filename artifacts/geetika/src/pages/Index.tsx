@@ -22,54 +22,54 @@ const HERO_SLIDES: Slide[] = [
     src: "/photo-singing.jpg",
     alt: "Geetika performing Hindustani classical vocal on stage",
     tone: "light",
-    eyebrow: "Singing Artist: Hindustani Classical",
+    eyebrow: "Geetika performing Hindustani classical vocal on stage",
     title: "",
-    body: "Stage performances & training with the guru-shishya tradition of Indian classical music.",
+    body: "Stage performances & training with the guru-shishya tradition of Indian classical music & dance.",
     objectPosition: "center 20%",
   },
   {
     src: "/photo-starparivar-set.jpg",
-    alt: "Geetika on the Star Parivaar set with National Stars: Barun Sobti and Ridhi Dogra",
+    alt: "Geetika on the Star Parivaar set with National Star: Ridhi Dogra",
     tone: "light",
     eyebrow: "Child Artist · Star Plus · National Television",
     title: "",
-    body: "On set with Barun Sobti and Ridhi Dogra, Iss Pyar Ko Kya Naam Doon.",
+    body: "On set with Ridhi Dogra, Iss Pyar Ko Kya Naam Doon.",
     objectPosition: "top center",
   },
   {
     src: "/photo-lab-pipette2.jpg",
     alt: "Geetika with the McGill cancer cell research lab team",
     tone: "light",
-    eyebrow: "Scientist · McGill Cancer Cell Lab · March 2025",
+    eyebrow: "Passion for Biology · McGill Cancer Cell Lab · 2025",
     title: "",
     body: "Gel electrophoresis, Zeiss microscopy, pipetting",
     objectPosition: "top center",
   },
   {
-    src: "/photo-moon-stargazing.jpg",
-    alt: "Rooftop night sky observation, stargazing and meteor tracking",
+    src: "/photo-crown.jpg",
+    alt: "School President and Class Valedictorian",
     tone: "light",
-    eyebrow: "Self-Taught Junior Astronomer",
+    eyebrow: "School President and Female Class Valedictorian",
     title: "",
-    body: "Constellations, Black Voids & Shooting Stars",
-    objectPosition: "center center",
-  },
-  {
-    src: "/photo-jun-ye-selfie.jpg",
-    alt: "Geetika with quantum physicist Dr. Jun Ye at McGill",
-    tone: "light",
-    eyebrow: "Physicist · Jun Ye's Anna McPherson Seminar · McGill 2025",
-    title: "",
-    body: "Youngest attendee at a Nobel-adjacent physics lecturar's seminar.",
+    body: "Grades 3 & 5",
     objectPosition: "top center",
   },
   {
-    src: "/photo-robotics-hub.jpg",
-    alt: "FRC Team 7700, competition robotics",
+    src: "/photo-rajasthani.jpg",
+    alt: "Geetika in the traditional dress: Patto",
     tone: "light",
-    eyebrow: "Engineer · FRC Team 7700",
+    eyebrow: "Geetika in the traditional dress: Shimlan Patto",
     title: "",
-    body: "Builds, mechanicals, and teamwork in competition robotics.",
+    body: "Cultural curiosity & multicultural immersion deeply ingrained since birth",
+    objectPosition: "top center",
+  },
+  {
+    src: "/photo-henna.jpg",
+    alt: "Detailed artistry",
+    tone: "light",
+    eyebrow: "Micro details & aesthetics",
+    title: "",
+    body: "Multidisciplinary Visual artist with mastery in intricate arts & designs",
     objectPosition: "top center",
   },
 ];
@@ -291,7 +291,7 @@ const Index = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 mb-2">
+          <div className="grid md:grid-cols-5 gap-8">
             {[
               ["I", "About", "Me"],
               ["II", "Academics", "& Excellences"],
@@ -301,18 +301,20 @@ const Index = () => {
             ].map(([n, t, d], idx) => (
               <div
                 key={t}
-                className="border-t border-gold/40 pt-5 pb-2"
+                className="border-t border-gold/40 pt-4"
                 data-reveal
                 data-reveal-delay={String(idx * 100)}
               >
                 <p className="font-mono text-xs text-gold tracking-widest">{n}</p>
-                <h3 className="font-display text-2xl mt-2 mb-1">{t}</h3>
+                <h3 className="font-display text-2xl mt-2">{t}</h3>
                 <p className="text-paper/70 text-base mt-3 leading-relaxed font-accent">{d}</p>
               </div>
             ))}
           </div>
-          <div className="h-px bg-gold/15 my-8 md:my-12" />
-          <ol className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5" data-reveal>
+          <p></p>
+          <p></p>
+          <p></p>
+          <ol className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border" data-reveal>
             {CLUSTERS.map((c) => {
               const CI = c.icon;
               return (
