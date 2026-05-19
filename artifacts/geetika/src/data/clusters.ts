@@ -167,7 +167,7 @@ export const CLUSTERS: Cluster[] = [
       topic("Machine Learning", "Apple or tomato? Image classification, first session.",
         "First introduction to machine learning through a structured classroom session, training an image classifier to distinguish apples from tomatoes using supervised learning. Built using a web-based ML platform. The project was called 'Supermarket.' Simple problem, foundational concept.",
         { type: "image", src: "/photo-ml-class.jpg", caption: "Machine Learning Class, Image Classification Project, March 2025" }),
-      topic("Awards Vault", "Every ribbon, every certificate.",
+      topic("Notable Awards", "IEO Gold Medal, International Rank: 1",
         "Academic and extracurricular awards across mathematics, science, and competitions. SOF Science Olympiad, TCS IntelliGem Finalist, Gladrags Little Miss India Top 10, Whizz Kidzs Abacus National Award, and more.",
         { type: "image", src: "/photo-sof.jpg", caption: "SOF Science Olympiad, Certificate & Medal" }),
       topic("Research Interests", "Quantum, particle, astrophysics.",

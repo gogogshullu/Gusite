@@ -48,7 +48,7 @@ export const CLUSTERS: Cluster[] = [
   {
     num: "02", slug: "academics", label: "Academics, STEM & Research", icon: GraduationCap,
       topic("Subject Strengths", "Where the numbers back the curiosity.", "Mathematics, physics, and computer science form the core. But strengths aren't limited to STEM, writing, languages, and the humanities round out the picture. Each subject has evidence, not just claims."),
-      topic("Awards Vault", "Every ribbon, every certificate.", "Academic competitions, olympiad placements, honor rolls, and subject awards, catalogued with context, not just titles. Each award tells a story about what was happening when it was earned."),
+      topic("Notable Awards", "IEO Gold Medal, International Rank: 1", "Academic competitions, olympiad placements, honor rolls, and subject awards, catalogued with context, not just titles. Each award tells a story about what was happening when it was earned."),
       topic("Growth Notes", "Where I struggled and what I learned.", "Not every subject came easy. Growth notes document the gaps, the comebacks, and the lessons that stuck. Honest self-assessment is more valuable than a perfect transcript."),
       topic("Physics Journey", "From curiosity to self-taught practice.", "Physics started as questions at the dinner table and became a disciplined self-study practice. From classical mechanics to quantum concepts, this is the log of a mind learning to think in equations."),
       topic("Research Interests", "What I want to investigate next.", "Interdisciplinary research at the intersection of physics, computation, and design. Current interests include quantum information, complex systems, and the mathematics of creative processes."),
