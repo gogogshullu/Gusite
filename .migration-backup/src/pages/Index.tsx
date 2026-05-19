@@ -51,7 +51,7 @@ const HERO_SLIDES: Slide[] = [
     tone: "light",
     eyebrow: "Self-Taught Junior Astronomer",
     title: "",
-    body: "Constellations, Black Voids & Shooting Stars",
+    body: "Constellations & Shooting Stars",
     objectPosition: "center center",
   },
   {
