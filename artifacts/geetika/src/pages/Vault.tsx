@@ -464,12 +464,11 @@ function CVContent() {
 
         <section>
           <CVEyebrow>Academic Achievements</CVEyebrow>
-          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
-            <ul className="space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
+            <ul className="grid gap-2 sm:col-span-2">
               {academicAchievements.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold mt-1 shrink-0">·</span>
-                  <span>{item}</span>
+                <li key={item} className="border border-border bg-card px-3 py-2 text-xs text-ink-soft leading-relaxed">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -478,12 +477,11 @@ function CVContent() {
 
         <section>
           <CVEyebrow icon={Film}>Film, Television & Voice Acting</CVEyebrow>
-          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl mb-4">
-            <ul className="space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2 max-w-3xl mb-4">
+            <ul className="grid gap-2 sm:col-span-2">
               {filmCredits.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold mt-1 shrink-0">·</span>
-                  <span>{item}</span>
+                <li key={item} className="border border-border bg-card px-3 py-2 text-xs text-ink-soft leading-relaxed">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -496,12 +494,11 @@ function CVContent() {
 
         <section>
           <CVEyebrow icon={Music}>Music & Performing Arts</CVEyebrow>
-          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
-            <ul className="space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
+            <ul className="grid gap-2 sm:col-span-2">
               {musicItems.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold mt-1 shrink-0">·</span>
-                  <span>{item}</span>
+                <li key={item} className="border border-border bg-card px-3 py-2 text-xs text-ink-soft leading-relaxed">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -517,12 +514,11 @@ function CVContent() {
 
         <section>
           <CVEyebrow>Creative Writing & Storytelling</CVEyebrow>
-          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
-            <ul className="space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
+            <ul className="grid gap-2 sm:col-span-2">
               {writingItems.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold mt-1 shrink-0">·</span>
-                  <span>{item}</span>
+                <li key={item} className="border border-border bg-card px-3 py-2 text-xs text-ink-soft leading-relaxed">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -560,17 +556,16 @@ function CVContent() {
 
         <section>
           <CVEyebrow>Cultural & International Experience</CVEyebrow>
-          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
-            <ul className="space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
+            <ul className="grid gap-2 sm:col-span-2">
               {[
                 "Born in India; relocated to Montréal, Canada in October 2024",
                 "Experience adapting between Indian and Québec educational and cultural systems",
                 "Strong engagement with Rajasthani cultural traditions and arts",
                 "Preference for Québec French learning and integration",
               ].map(item => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold mt-1 shrink-0">·</span>
-                  <span>{item}</span>
+                <li key={item} className="border border-border bg-card px-3 py-2 text-xs text-ink-soft leading-relaxed">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -586,15 +581,14 @@ function CVContent() {
 
         <section>
           <CVEyebrow>Mentorship & Academic Guidance</CVEyebrow>
-          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
-            <ul className="space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2 max-w-3xl">
+            <ul className="grid gap-2 sm:col-span-2">
               {[
                 "Guidance from Amandeep Bakshi, Arpi Hamalian, and Ailie Cleghorn",
                 "Connected with Professor Mariana Frank regarding particle physics mentorship and research direction",
               ].map(item => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold mt-1 shrink-0">·</span>
-                  <span>{item}</span>
+                <li key={item} className="border border-border bg-card px-3 py-2 text-xs text-ink-soft leading-relaxed">
+                  {item}
                 </li>
               ))}
             </ul>

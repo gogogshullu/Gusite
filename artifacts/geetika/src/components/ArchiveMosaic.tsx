@@ -28,12 +28,12 @@ function TilePreview({ gallery }: { gallery: EmbedItem[] }) {
     if (item.type === "image") {
       return (
         <div key={key} className="relative w-full h-full overflow-hidden">
-          <img
-            src={item.src}
-            alt=""
-            aria-hidden
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
+        <img
+          src={item.src}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-contain"
+        />
         </div>
       );
     }
@@ -46,7 +46,7 @@ function TilePreview({ gallery }: { gallery: EmbedItem[] }) {
               src={thumb}
               alt=""
               aria-hidden
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
             />
           )}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -338,7 +338,7 @@ function ArchiveTile({
                         <img
                           src={media.src}
                           alt={media.caption ?? topic.label}
-                          className="absolute inset-0 w-full h-full object-cover object-top"
+                          className="absolute inset-0 w-full h-full object-contain"
                         />
                       )}
                       {media?.type === "link" && (
