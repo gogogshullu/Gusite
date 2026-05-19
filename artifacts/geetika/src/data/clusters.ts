@@ -172,7 +172,7 @@ export const CLUSTERS: Cluster[] = [
         { type: "image", src: "/photo-sof.jpg", caption: "SOF Science Olympiad, Certificate & Medal" }),
       topic("Research Interests", "Quantum, particle, astrophysics.",
         "Current interests include quantum mechanics, particle physics, relativity, astrophysics, and complex systems. Additional interest in computational modeling and mathematical structures underlying physical systems.",
-        { type: "image", src: "/photo-quantum-research.jpg", caption: "Late-Night Physics Research, Quantum Study" }),
+        { type: "image", src: "/photo-nasa-europa-clipper.jpg", caption: "Late-Night Physics Research, Quantum Study" }),
       /*, text-only, sorted to end, */
       topic("Education", "India to Québec secondary system.",
         "Schooling began in India and continued in Canada after relocation in 2024. Current studies are based in Montréal within the Quebec secondary system, completing Secondary IV."),
