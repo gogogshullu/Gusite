@@ -23,7 +23,7 @@ function EssayPhoto({ src, alt, caption, align = "right" }: { src: string; alt: 
     </figure>
   );
   return (
-    <figure className={`my-0 mb-4 ${align === "right" ? "float-right ml-6" : "float-left mr-6"} w-28 md:w-40`}>
+    <figure className={`my-0 mb-4 ${align === "right" ? "float-right ml-7" : "float-left mr-7"} w-32 md:w-48`}>
       <div className="relative overflow-hidden border border-white/10" style={{ aspectRatio: "4/5" }}>
         <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-contain" />
         <span className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 pointer-events-none" />
@@ -39,7 +39,7 @@ const ESSAY_LI = { fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(14px,1
 
 function Essay() {
   return (
-    <article style={{ maxWidth: "640px", margin: "0 auto" }}>
+    <article style={{ maxWidth: "760px", margin: "0 auto" }}>
 
       <section style={{ marginBottom: "2.5rem" }}>
         <h3 style={ESSAY_H3}>I. Profile</h3>

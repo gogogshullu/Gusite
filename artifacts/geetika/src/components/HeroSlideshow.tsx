@@ -112,7 +112,7 @@ export function HeroSlideshow({ slides, intervalMs = 6000 }: Props) {
           </div>
 
           {/* Text block, padded left on mobile so the nav arrow doesn't overlap the gold eyebrow */}
-          <div className="max-w-4xl pl-14 sm:pl-0">
+          <div className="max-w-4xl pl-14 sm:pl-0 md:pl-6 lg:pl-12 translate-y-2 md:translate-y-4">
             {s.eyebrow && (
               <p className={`font-mono text-xs uppercase tracking-[0.3em] ${accent} mb-6`}>
                 {s.eyebrow}
