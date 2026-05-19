@@ -43,7 +43,7 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "Passion for Biology · McGill Cancer Cell Lab · 2025",
     title: "",
     body: "Gel electrophoresis, Zeiss microscopy, pipetting",
-    objectPosition: "top center",
+    objectPosition: "center 20%",
   },
   {
     src: "/photo-crown.jpg",
@@ -52,7 +52,7 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "School President and Female Class Valedictorian",
     title: "",
     body: "Grades 3 & 5",
-    objectPosition: "center 20%",
+    objectPosition: "center center",
   },
   {
     src: "/photo-rajasthani.jpg",
@@ -70,7 +70,7 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "Micro details & aesthetics",
     title: "",
     body: "Multidisciplinary Visual artist with mastery in intricate arts & designs",
-    objectPosition: "top center",
+    objectPosition: "center center",
   },
 ];
 
