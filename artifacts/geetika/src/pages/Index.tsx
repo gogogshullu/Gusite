@@ -71,7 +71,7 @@ const HERO_SLIDES: Slide[] = [
     title: "",
     body: "Multidisciplinary Visual artist with mastery in intricate arts & designs",
     objectPosition: "center center",
-
+  },
 ];
 
 /* -------------------- SKILLS TOOLKIT -------------------- */
