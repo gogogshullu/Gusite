@@ -27,11 +27,11 @@ const CVResume = () => {
         <div className="flex items-start gap-5 mb-6 animate-fade-in">
           <FileText className="w-6 h-6 text-gold shrink-0 mt-2" />
           <h1 className="display-xl text-xl md:text-2xl lg:text-3xl text-balance max-w-5xl animate-fade-up">
-            Every receipt, open for inspection.
+            Documents
           </h1>
         </div>
         <p className="mt-8 max-w-2xl text-base md:text-lg text-ink-soft leading-relaxed font-accent italic animate-fade-up">
-          The full record, interactive CV, downloadable PDF, and a printable résumé.
+          The full record, interactive, downloadable PDF, and printable CV and résumé.
         </p>
         <div className="rule-gold mt-10" />
       </section>

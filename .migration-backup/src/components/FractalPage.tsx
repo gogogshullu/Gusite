@@ -237,7 +237,7 @@ export function FractalPage() {
       {c.slug === "works" && <WorksMoodBoard />}
 
       {c.slug === "contact" && (
-        <Rail id="get-in-touch" icon={Mail} label="Get in touch" title="Open correspondence">
+        <Rail id="get-in-touch" icon={Mail} label="Get in touch" title="Contact">
           <ContactBlock />
         </Rail>
       )}

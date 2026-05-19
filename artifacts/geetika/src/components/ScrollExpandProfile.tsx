@@ -271,7 +271,7 @@ function Essay() {
 
       <section className="essay-section mb-9">
         <h3 className="essay-heading">I. Origin</h3>
-        <EssayPhoto src={achCasual} alt="Geetika in casual wear" caption="Montréal, 2024" align="right" />
+        <EssayPhoto src={achCasual} alt="Geetika in casual wear" caption=" " align="right" />
         <p className="drop-cap">
           I was born in a city that does not sleep lightly. Rajasthan, India, sandstone
           and spice and a sky so wide it made ambition feel obligatory. My earliest memories

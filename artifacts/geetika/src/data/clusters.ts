@@ -453,7 +453,7 @@ export const CLUSTERS: Cluster[] = [
      ══════════════════════════════════════════════════════════ */
   {
     num: "04", slug: "vault", label: "CV & Resume", icon: FileText,
-    tagline: "CV, certificates, transcripts, recognition, every receipt, open for inspection.",
+    tagline: "Documents",
     topics: [
       topic("Certificates", "Every certificate, catalogued.",
         "Academic certificates, competition awards, extracurricular recognitions, each one scanned, dated, and contextualized."),
@@ -469,7 +469,7 @@ export const CLUSTERS: Cluster[] = [
      ══════════════════════════════════════════════════════════ */
   {
     num: "05", slug: "contact", label: "Contact", icon: Mail,
-    tagline: "Open correspondence and links to everywhere else.",
+    tagline: "Contact and links to everywhere else.",
     topics: [
       topic("Channels", "Where to find me.",
         "Email, LinkedIn, GitHub, and other platforms, the official channels for professional and creative correspondence."),

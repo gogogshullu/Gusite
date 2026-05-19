@@ -25,7 +25,7 @@ const Contact = () => {
           <span className="flex-1 h-px bg-border" />
         </div>
         <h1 className="display-xl text-5xl md:text-7xl lg:text-8xl text-balance max-w-5xl animate-fade-up">
-          Open correspondence and links to everywhere else.
+          Contact and links to everywhere else.
         </h1>
         <p className="mt-8 max-w-2xl text-lg md:text-xl text-ink-soft leading-relaxed font-display italic animate-fade-up">
           Click any box for details, or use the form below to reach out directly.

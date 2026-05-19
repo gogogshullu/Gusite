@@ -27,7 +27,7 @@ const Vault = () => {
         <div className="flex items-start gap-5 mb-6 animate-fade-in">
           <FileText className="w-6 h-6 text-gold shrink-0 mt-2" />
           <h1 className="display-xl text-5xl md:text-7xl lg:text-8xl text-balance max-w-5xl animate-fade-up">
-            Every receipt, open for inspection.
+            A
           </h1>
         </div>
         <p className="mt-8 max-w-2xl text-lg md:text-xl text-ink-soft leading-relaxed font-display italic animate-fade-up">

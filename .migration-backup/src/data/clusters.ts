@@ -72,7 +72,7 @@ export const CLUSTERS: Cluster[] = [
       topic("Instrumental", "Keys, strings, and self-taught paths.", "Keyboard, harmonium, and explorations into other instruments. Self-taught approaches that complement formal vocal training and feed into composition and arrangement."),
       topic("Performance Portfolio", "Stage time, documented.", "Concerts, recitals, school performances, and informal sessions, every stage is a data point. The portfolio tracks growth over years of live performance."),
       topic("Repertoire", "The catalog of what I perform.", "A living list of raagas, compositions, and pieces, classical and contemporary. Repertoire is the map of what the voice can do."),
-      topic("Child Artist Archive", "Years on screen.", "Film and television credits from childhood, acting roles, voice work, and the experience of growing up on set. The archive includes stills, credits, and reflections on early media work."),
+      topic("Child Artist Archive", "Years on screen.", "Film and television credits from childhood, acting roles, voice work, and the experience of growing up on set. Groups includes stills, credits, and reflections on early media work."),
       topic("Acting Reel", "Selected scenes and performances.", "A curated reel of acting work, dramatic scenes, comedic timing, and the craft of becoming someone else on camera."),
       topic("Voice & Screen", "Voice acting and on-camera work.", "Voice-over credits, dubbing work, and the particular discipline of performing with just your voice. Separate from on-camera acting, this is a distinct craft with its own techniques."),
       topic("Media Credits", "The full filmography.", "Every credit, every production, every role, catalogued with context. From lead roles to ensemble work, the credits tell the story of a decade on screen."),
@@ -100,7 +100,7 @@ export const CLUSTERS: Cluster[] = [
   },
   {
     num: "04", slug: "vault", label: "CV & Document Vault", icon: FileText,
-    tagline: "CV, certificates, transcripts, recognition, every receipt, open for inspection.",
+    tagline: "Documents",
     topics: [
       topic("Certificates", "Every certificate, catalogued.", "Academic certificates, competition awards, extracurricular recognitions, and professional credentials, each one scanned, dated, and contextualized. The vault is the paper trail."),
       topic("Transcripts", "The academic record, unredacted.", "Official transcripts, grade reports, and standardized test scores. Not just the highlights, the full record, including the semesters that taught the most."),
@@ -109,7 +109,7 @@ export const CLUSTERS: Cluster[] = [
   },
   {
     num: "05", slug: "contact", label: "Contact & Links", icon: Mail,
-    tagline: "Open correspondence and links to everywhere else.",
+    tagline: "Contact and links to everywhere else.",
     topics: [
       topic("Channels", "Where to find me.", "Email, LinkedIn, GitHub, and other platforms, the official channels for professional and creative correspondence. Each channel has its purpose."),
       topic("Links", "The wider web.", "External projects, collaborations, publications, and platforms where my work lives beyond this site. The links section is the map of my digital footprint."),

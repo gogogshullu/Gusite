@@ -97,7 +97,7 @@ const FEATURED: BentoItem[] = [
     id: "f-frc", size: "xl", eyebrow: "Robotics",
     title: "Robotics Hub",
     blurb: "Team 7700, Westmount High",
-    image: "/photo-robotics-hub.jpg", imagePosition: "top center", meta: "Cluster 04 · Robotics",
+    image: "/photo-robotics-hub.jpg", imagePosition: "top center", meta: "Group 04 · Robotics",
     detail: (
       <div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
@@ -113,7 +113,7 @@ const FEATURED: BentoItem[] = [
     id: "f-novel", size: "lg", eyebrow: "Writing",
     title: "Screenwriting & Novels",
     blurb: "Movies & the multi-book story worlds I've been building for years.",
-    image: "/photo-screenplay-board.jpg", imagePosition: "center", meta: "Cluster 05 · Writing",
+    image: "/photo-screenplay-board.jpg", imagePosition: "center", meta: "Group 05 · Writing",
     detail: (
       <div>
         <img src="/photo-screenplay-board.jpg" alt="Story structure board" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
@@ -125,7 +125,7 @@ const FEATURED: BentoItem[] = [
     id: "f-vocal", size: "md", eyebrow: "Performance",
     title: "Notable Early Performances",
     blurb: "Stage repertoire, raagas, and live performance reels.",
-    image: "/photo-singing.jpg", imagePosition: "center 20%", meta: "Cluster 06 · Music",
+    image: "/photo-singing.jpg", imagePosition: "center 20%", meta: "Group 06 · Music",
     detail: (
       <div>
         <img src="/photo-singing.jpg" alt="Stage performance" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
@@ -145,7 +145,7 @@ const FEATURED: BentoItem[] = [
     id: "f-ap", size: "md", eyebrow: "Academics",
     title: "Academics",
     blurb: "The transcript backing the curiosity.",
-    image: "/photo-jun-ye-selfie.jpg", imagePosition: "top center", meta: "Cluster 02 · Academics",
+    image: "/photo-jun-ye-selfie.jpg", imagePosition: "top center", meta: "Group 02 · Academics",
     detail: (
       <div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
@@ -162,7 +162,7 @@ const FEATURED: BentoItem[] = [
     id: "f-acting", size: "md", eyebrow: "Screen",
     title: "On Screen",
     blurb: "Years on screen, in front of a camera and a microphone!",
-    image: "/tv-altbalaji.png", imagePosition: "top center", meta: "Cluster 07 · Acting",
+    image: "/tv-altbalaji.png", imagePosition: "top center", meta: "Group 07 · Acting",
     detail: (
       <div>
         <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: "1rem" }}>
@@ -182,7 +182,7 @@ const FEATURED: BentoItem[] = [
     id: "f-zion", size: "md", eyebrow: "Tech",
     title: "Multimedia",
     blurb: "A multimedia universe I built from scratch.",
-    image: "/photo-dubbing-studio.jpg", imagePosition: "top center", meta: "Cluster 08 · Tech",
+    image: "/photo-dubbing-studio.jpg", imagePosition: "top center", meta: "Group 08 · Tech",
     detail: (
       <div>
         <img src="/photo-studio.jpg" alt="Studio and production setup" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
@@ -281,12 +281,12 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-10 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">004 · The Archive</p>
+              <p className="label-gold mb-3">004 · Groups</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
-                Five pages, <span className="font-accent text-gold">one dossier.</span>
+                Five main <span className="font-accent text-gold">pages</span>
               </h2>
               <p className="mt-4 max-w-xl text-ink-soft text-sm leading-relaxed font-accent italic">
-                The five main pages: about, academics & research,
+                About, academics & research,
                 the works, the documents, and contact.
               </p>
             </div>
@@ -311,6 +311,9 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <p></p>
+          <p></p>
+          <p></p>
           <ol className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border" data-reveal>
             {CLUSTERS.map((c) => {
               const CI = c.icon;
@@ -423,8 +426,8 @@ const Index = () => {
         <div className="grid md:grid-cols-3 gap-2">
           {[
             { src: "/photo-gladrags-solo.jpg", label: "Gladrags Pageant", num: "I" },
-            { src: "/photo-ymca-event.jpg", label: "YMCA Yough Co-op, Vice President", num: "II" },
-            { src: "/photo-karate.jpg", label: "National Gold Medals in Martial Arts", num: "III" },
+            { src: "/photo-ymca-event.jpg", label: "YMCA youth Co-op, Vice President", num: "II" },
+            { src: "/photo-karate.jpg", label: "National Gold Medal in Martial Arts", num: "III" },
           ].map((x, idx) => (
             <TriptychPlate key={x.label} {...x} idx={idx} />
           ))}
