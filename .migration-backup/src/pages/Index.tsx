@@ -1,16 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
-  Atom, Cpu, Music2, Mic2, Code2, PenTool, Languages, Trophy,
+  ArrowUpRight, Atom, Cpu, Music2, Mic2, Code2, PenTool, Languages, Trophy,
   Camera, Wand2, Brain, Palette,
 } from "lucide-react";
 import { PageShell } from "@/components/SiteChrome";
-import { PullQuote } from "@/components/Editorial";
 import { Bento, type BentoItem } from "@/components/Bento";
 import { HeroSlideshow, type Slide } from "@/components/HeroSlideshow";
-import { CLUSTERS, findCluster } from "@/data/clusters";
+import { CLUSTERS } from "@/data/clusters";
 import { useReveal } from "@/hooks/useReveal";
-import heroPortrait from "@/assets/hero-portrait.jpg";
 import textureCosmos from "@/assets/texture-cosmos.jpg";
 import texturePaper from "@/assets/texture-paper.jpg";
 import atmosTelescope from "@/assets/atmos-telescope.jpg";
@@ -20,34 +19,58 @@ import atmosMusic from "@/assets/atmos-music.jpg";
 /* -------------------- HERO SLIDESHOW -------------------- */
 const HERO_SLIDES: Slide[] = [
   {
-    src: heroPortrait, alt: "Geetika Gehlot, portrait",
-    tone: "light", eyebrow: "Geetika Gehlot · I",
-    title: "Building worlds.",
-    body: "Scientist · Researcher · Creator · Musician · Storyteller · Innovator. A 15-year-old multidisciplinary mind from Montréal.",
+    src: "/photo-singing.jpg",
+    alt: "Geetika performing Hindustani classical vocal on stage",
+    tone: "light",
+    eyebrow: "Singing Artist: Hindustani Classical",
+    title: "",
+    body: "Stage performances & training with the guru-shishya tradition of Indian classical music.",
+    objectPosition: "center 20%",
   },
   {
-    src: atmosTelescope, alt: "Telescope under stars",
-    tone: "light", eyebrow: "Plate II · Observation",
-    title: "Through the lens.",
-    body: "Robotics, physics, and the slow art of paying attention.",
+    src: "/photo-starparivar-set.jpg",
+    alt: "Geetika on the Star Parivaar set with National Stars: Barun Sobti and Ridhi Dogra",
+    tone: "light",
+    eyebrow: "Child Artist · Star Plus · National Television",
+    title: "",
+    body: "On set with Barun Sobti and Ridhi Dogra, Iss Pyar Ko Kya Naam Doon.",
+    objectPosition: "top center",
   },
   {
-    src: atmosNotebook, alt: "Open notebook with handwritten pages",
-    tone: "dark", eyebrow: "Plate III · Notation",
-    title: "On the page.",
-    body: "A novel cycle in motion. Words before pixels, always.",
+    src: "/photo-lab-pipette2.jpg",
+    alt: "Geetika with the McGill cancer cell research lab team",
+    tone: "light",
+    eyebrow: "Scientist · McGill Cancer Cell Lab · March 2025",
+    title: "",
+    body: "Gel electrophoresis, Zeiss microscopy, pipetting",
+    objectPosition: "top center",
   },
   {
-    src: atmosMusic, alt: "Stage lights and microphone",
-    tone: "light", eyebrow: "Plate IV · Resonance",
-    title: "In full voice.",
-    body: "Hindustani vocal, voice acting, and the discipline of stage.",
+    src: "/photo-moon-stargazing.jpg",
+    alt: "Rooftop night sky observation, stargazing and meteor tracking",
+    tone: "light",
+    eyebrow: "Self-Taught Junior Astronomer",
+    title: "",
+    body: "Constellations, Black Voids & Shooting Stars",
+    objectPosition: "center center",
   },
   {
-    src: texturePaper, alt: "Aged paper texture",
-    tone: "dark", eyebrow: "Plate V · Dossier",
-    title: "Examined in public.",
-    body: "Every claim, every clipping, every receipt, open for inspection.",
+    src: "/photo-jun-ye-selfie.jpg",
+    alt: "Geetika with quantum physicist Dr. Jun Ye at McGill",
+    tone: "light",
+    eyebrow: "Physicist · Jun Ye's Anna McPherson Seminar · McGill 2025",
+    title: "",
+    body: "Youngest attendee at a Nobel-adjacent physics lecturar's seminar.",
+    objectPosition: "top center",
+  },
+  {
+    src: "/photo-robotics-hub.jpg",
+    alt: "FRC Team 7700, competition robotics",
+    tone: "light",
+    eyebrow: "Engineer · FRC Team 7700",
+    title: "",
+    body: "Builds, mechanicals, and teamwork in competition robotics.",
+    objectPosition: "top center",
   },
 ];
 
@@ -72,37 +95,101 @@ const SKILLS: { icon: React.ComponentType<{ className?: string }>; label: string
 const FEATURED: BentoItem[] = [
   {
     id: "f-frc", size: "xl", eyebrow: "Robotics",
-    title: "FRC Team 7700",
-    blurb: "Build seasons, mechanical instinct, and the controlled chaos of competition robotics.",
-    image: atmosTelescope, meta: "Cluster 04 · Robotics",
-    detail: "From CAD reviews at midnight to driver-station nerves on game day, Team 7700 is where I learned to design under deadline, debug under pressure, and trust a team. Click through to the cluster for the full build log.",
+    title: "Robotics Hub",
+    blurb: "Team 7700, Westmount High",
+    image: "/photo-robotics-hub.jpg", imagePosition: "top center", meta: "Cluster 04 · Robotics",
+    detail: (
+      <div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
+          <img src="/photo-robotics-pit.jpg" alt="Robotics Hub pit work" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+          <img src="/photo-robotics-hub.jpg" alt="Robotics Hub workshop" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+          <img src="/photo-robotics-parts.jpg" alt="Robotics Hub parts" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+        </div>
+        <p>The FRC 7700 robotics room at school: organized and sorted hardware trays, 7700 bumper stacks, and the electric saw running most of the season.</p>
+      </div>
+    ),
   },
   {
     id: "f-novel", size: "lg", eyebrow: "Writing",
-    title: "The Novel Cycle",
-    blurb: "A multi-book story world I've been building for years.",
-    image: atmosNotebook, meta: "Cluster 05 · Writing",
+    title: "Screenwriting & Novels",
+    blurb: "Movies & the multi-book story worlds I've been building for years.",
+    image: "/photo-screenplay-board.jpg", imagePosition: "center", meta: "Cluster 05 · Writing",
+    detail: (
+      <div>
+        <img src="/photo-screenplay-board.jpg" alt="Story structure board" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
+        <p>The fictional creative projects: with intense narratives, structured world-building, and a sustained multi-year writing output. The story structure boards shown displays the full story-arc, with a three-act structure, with character flaws, midpoint reversals, and other screenwriting elements.</p>
+      </div>
+    ),
   },
   {
     id: "f-vocal", size: "md", eyebrow: "Performance",
-    title: "Hindustani Vocal",
+    title: "Notable Early Performances",
     blurb: "Stage repertoire, raagas, and live performance reels.",
-    image: atmosMusic, meta: "Cluster 06 · Music",
+    image: "/photo-singing.jpg", imagePosition: "center 20%", meta: "Cluster 06 · Music",
+    detail: (
+      <div>
+        <img src="/photo-singing.jpg" alt="Stage performance" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
+        <div style={{ display: "grid", gap: "0.75rem", marginBottom: "1rem" }}>
+          <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+            <iframe src="https://www.youtube.com/embed/DiAoqNQJzRU" title="Bharatnatyam Performance" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "4px", border: "none" }} allowFullScreen />
+          </div>
+          <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+            <iframe src="https://www.youtube.com/embed/5QBuTpvBKiw" title="Rajasthani Dance Performance" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "4px", border: "none" }} allowFullScreen />
+          </div>
+        </div>
+        <p>Here are few performances of Dance, Presentation and Hindustani classical music & singing, all under the guru-shishya tradition. With the raga-based singings, rhythmic practices, and stage participation. Trained in Bharatnatyam and Rajasthani folk dance.</p>
+      </div>
+    ),
   },
   {
     id: "f-ap", size: "md", eyebrow: "Academics",
-    title: "AP Track + Olympiads",
-    blurb: "The transcript backing the curiosity.", meta: "Cluster 02 · Academics",
+    title: "Academics",
+    blurb: "The transcript backing the curiosity.",
+    image: "/photo-jun-ye-selfie.jpg", imagePosition: "top center", meta: "Cluster 02 · Academics",
+    detail: (
+      <div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
+          <img src="/photo-jun-ye-selfie.jpg" alt="With Dr. Jun Ye at McGill" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
+          <img src="/photo-narayana-principal.jpg" alt="Narayana School highest batch" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
+          <img src="/photo-allen-physics.jpg" alt="Allen Institute physics notes" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
+          <img src="/photo-lab-microscope.jpg" alt="Cancer cell lab session" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
+        </div>
+        <p>AP Biology, AP Environmental Science, AP Physics C: E&amp;M and Mechanics, AP Calculus AB, AP Chemistry, AP English Literature, AP Microeconomics, AP Macroeconomics, AP Psychology, these were all taken within 1 year. Zero fails! Plus competitive olympiad training and attendance at Nobel-adjacent physics lectures, alongside an excellent foundation of university-level science-math taught since the age 12</p>
+      </div>
+    ),
   },
   {
     id: "f-acting", size: "md", eyebrow: "Screen",
-    title: "Child Artist Reel",
-    blurb: "Years on screen, in front of a camera and a microphone.", meta: "Cluster 07 · Acting",
+    title: "On Screen",
+    blurb: "Years on screen, in front of a camera and a microphone!",
+    image: "/tv-altbalaji.png", imagePosition: "top center", meta: "Cluster 07 · Acting",
+    detail: (
+      <div>
+        <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: "1rem" }}>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLa3Wj4jzB_6FG8GcJA41Lx2JGtABeQN5f" title="Child Artist Full Reel" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "4px", border: "none" }} allowFullScreen />
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
+          <img src="/tv-ddkisan.png" alt="DD Kisan Salaam India" style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
+          <img src="/tv-zeeholi.png" alt="Zee TV Woh Apna Sa" style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
+          <img src="/tv-altbalaji.png" alt="Alt Balaji Rhymes Series" style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
+          <img src="/tv-asianpaints.png" alt="Asian Paints Eco Xpress" style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
+        </div>
+        <p>Zee TV · Star Parivaar · DD Kisan · Alt Balaji · 9XM · Asian Paints · Gladrags Little Miss India Top 7. Dubbing for Veere Di Wedding & Hindi Medium; Lead roles, supporting credits, voice work, and modelling across Indian national media.</p>
+      </div>
+    ),
   },
   {
     id: "f-zion", size: "md", eyebrow: "Tech",
-    title: "Zionaxelle",
-    blurb: "A multimedia universe I built from scratch.", meta: "Cluster 08 · Tech",
+    title: "Multimedia",
+    blurb: "A multimedia universe I built from scratch.",
+    image: "/photo-dubbing-studio.jpg", imagePosition: "top center", meta: "Cluster 08 · Tech",
+    detail: (
+      <div>
+        <img src="/photo-studio.jpg" alt="Studio and production setup" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
+        <img src="/photo-dj-software.jpg" alt="DaVinci Resolve and production work" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
+        <p>Dubbed in Blockbuster Bollywood Movies. Fluent in DJ-ing, FL Studio since 2020, DaVinci Resolve since 2020, full-stack web development. Multimedia creative brand project involving design, web presence, visual identity, content strategy, and production pipeline. Self-designed from the ground up as a creative outlet!</p>
+      </div>
+    ),
   },
 ];
 
@@ -335,32 +422,11 @@ const Index = () => {
       <section className="container py-8 md:py-10">
         <div className="grid md:grid-cols-3 gap-2">
           {[
-            { src: atmosTelescope, label: "Observation", num: "I" },
-            { src: atmosNotebook, label: "Notation", num: "II" },
-            { src: atmosMusic, label: "Resonance", num: "III" },
+            { src: "/photo-gladrags-solo.jpg", label: "Gladrags Pageant", num: "I" },
+            { src: "/photo-ymca-event.jpg", label: "YMCA Yough Co-op, Vice President", num: "II" },
+            { src: "/photo-karate.jpg", label: "National Gold Medals in Martial Arts", num: "III" },
           ].map((x, idx) => (
-            <figure
-              key={x.label}
-              data-reveal
-              data-reveal-delay={String(idx * 120)}
-              className="relative aspect-[3/4] overflow-hidden group crumpled-paper film-grain stipple"
-            >
-              <img
-                src={x.src}
-                alt={x.label}
-                width={1600}
-                height={1000}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/30 to-transparent" />
-              <div className="absolute inset-3 border border-paper/15 pointer-events-none" />
-              <figcaption className="absolute bottom-6 left-6 right-6 text-paper">
-                <span className="font-mono text-xs text-gold tracking-widest">PLATE {x.num}</span>
-                <p className="font-display text-3xl md:text-4xl mt-1 leading-tight">{x.label}</p>
-                <span className="block w-10 h-px bg-gold mt-3 transition-all duration-500 group-hover:w-20" />
-              </figcaption>
-            </figure>
+            <TriptychPlate key={x.label} {...x} idx={idx} />
           ))}
         </div>
       </section>
@@ -368,5 +434,49 @@ const Index = () => {
     </PageShell>
   );
 };
+
+function TriptychPlate({ src, label, num, idx }: { src: string; label: string; num: string; idx: number }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <figure
+        data-reveal
+        data-reveal-delay={String(idx * 120)}
+        onClick={() => setOpen(true)}
+        className="relative aspect-[3/4] overflow-hidden group crumpled-paper film-grain stipple cursor-pointer"
+      >
+        <img
+          src={src}
+          alt={label}
+          width={1600}
+          height={1000}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-contain transition-transform duration-[1400ms] group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/30 to-transparent" />
+        <div className="absolute inset-3 border border-paper/15 pointer-events-none" />
+        <figcaption className="absolute bottom-6 left-6 right-6 text-paper">
+          <span className="font-mono text-xs text-gold tracking-widest">PLATE {num}</span>
+          <p className="font-display text-3xl md:text-4xl mt-1 leading-tight">{label}</p>
+          <span className="block w-10 h-px bg-gold mt-3 transition-all duration-500 group-hover:w-20" />
+        </figcaption>
+      </figure>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-2xl p-0 overflow-hidden bg-navy-deep text-paper-contrast">
+          <DialogTitle className="sr-only">PLATE {num} · {label}</DialogTitle>
+          <img
+            src={src}
+            alt={label}
+            className="w-full object-contain max-h-[85vh]"
+          />
+          <div className="p-5 border-t border-gold/20">
+            <p className="font-mono text-xs text-gold tracking-widest mb-1">PLATE {num}</p>
+            <p className="font-display text-xl text-gold">{label}</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}
 
 export default Index;
