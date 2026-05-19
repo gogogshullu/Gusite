@@ -70,7 +70,8 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "Micro details & aesthetics",
     title: "",
     body: "Multidisciplinary Visual artist with mastery in intricate arts & designs",
-    objectPosition: "center 28%",
+    objectPosition: "center center",
+    transform: "rotate(90deg)"
   },
 ];
 
