@@ -66,7 +66,7 @@ function ContactBlock() {
   return (
     <div className="space-y-10 w-full max-w-4xl mx-auto">
       {/* Archive-style channel tiles */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 justify-center">
         {channels.map(({ icon: I, label, value, href, num }) => {
           const inner = (
             <div
