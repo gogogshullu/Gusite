@@ -95,18 +95,18 @@ const SKILLS: { icon: React.ComponentType<{ className?: string }>; label: string
 const FEATURED: BentoItem[] = [
   {
     id: "f-frc", size: "xl", eyebrow: "Robotics",
-    title: "FRC Team 7700",
-    blurb: "Build seasons, mechanical instinct, and the controlled chaos of competition robotics.",
+    title: "Robotics Hub",
+    blurb: "The shop. The parts. The process.",
     image: "/photo-robotics-pit.jpg", imagePosition: "top center", meta: "Cluster 04 · Robotics",
     detail: (
       <div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
-          <img src="/photo-robotics-pit.jpg" alt="FRC 7700 Pit Work" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
-          <img src="/photo-robotics-hub.jpg" alt="FRC 7700 Workshop" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
-          <img src="/photo-wie-build.jpg" alt="WIE Build Challenge" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
-          <img src="/photo-singappenny.jpg" alt="Singappenny's 2025" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
+          <img src="/photo-robotics-pit.jpg" alt="Robotics Hub pit work" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+          <img src="/photo-robotics-hub.jpg" alt="Robotics Hub workshop" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+          <img src="/photo-wie-build.jpg" alt="Robotics Hub build challenge" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+          <img src="/photo-singappenny.jpg" alt="Robotics Hub team moment" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
         </div>
-        <p>From CAD reviews at midnight to driver-station nerves on game day, Team 7700 is where I learned to design under deadline, debug under pressure, and trust a team. Six weeks every season to design, fabricate, wire, and programme a full competition robot from a kit of parts. The build log runs deep.</p>
+        <p>The FRC 7700 robotics room at school: butcher-block workbenches, organized hardware trays sorted by fastener type and bracket size, 7700 bumper stacks in the corner, and the drill press running most of the season.</p>
       </div>
     ),
   },
@@ -463,7 +463,7 @@ function TriptychPlate({ src, label, num, idx }: { src: string; label: string; n
         </figcaption>
       </figure>
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-2xl p-0 overflow-hidden bg-navy-deep">
+        <DialogContent className="max-w-2xl p-0 overflow-hidden bg-navy-deep text-paper-contrast">
           <DialogTitle className="sr-only">PLATE {num} · {label}</DialogTitle>
           <img
             src={src}
@@ -472,7 +472,7 @@ function TriptychPlate({ src, label, num, idx }: { src: string; label: string; n
           />
           <div className="p-5 border-t border-gold/20">
             <p className="font-mono text-xs text-gold tracking-widest mb-1">PLATE {num}</p>
-            <p className="font-display text-xl text-paper-contrast">{label}</p>
+            <p className="font-display text-xl text-gold">{label}</p>
           </div>
         </DialogContent>
       </Dialog>
