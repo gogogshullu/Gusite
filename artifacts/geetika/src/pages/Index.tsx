@@ -452,8 +452,7 @@ function TriptychPlate({ src, label, num, idx }: { src: string; label: string; n
           width={1600}
           height={1000}
           loading="lazy"
-          style={{ objectPosition: "top center" }}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-110"
+          className="absolute inset-0 w-full h-full object-contain transition-transform duration-[1400ms] group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/30 to-transparent" />
         <div className="absolute inset-3 border border-paper/15 pointer-events-none" />
@@ -469,8 +468,7 @@ function TriptychPlate({ src, label, num, idx }: { src: string; label: string; n
           <img
             src={src}
             alt={label}
-            style={{ objectPosition: "top center" }}
-            className="w-full object-cover max-h-[75vh]"
+            className="w-full object-contain max-h-[85vh]"
           />
           <div className="p-5 border-t border-gold/20">
             <p className="font-mono text-xs text-gold tracking-widest mb-1">PLATE {num}</p>

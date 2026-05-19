@@ -16,8 +16,8 @@ function EssayPhoto({ src, alt, caption, align = "right" }: { src: string; alt: 
   if (align === "full") return (
     <figure className="my-8 w-full clear-both">
       <div className="relative w-full overflow-hidden border border-white/10" style={{ aspectRatio: "21/8" }}>
-        <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-cover object-top" />
-        <span className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+        <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-contain" />
+        <span className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 pointer-events-none" />
       </div>
       <figcaption className="mt-2 text-center font-mono uppercase tracking-[0.2em] text-white/30" style={{ fontSize: "8px" }}>{caption}</figcaption>
     </figure>
@@ -25,8 +25,8 @@ function EssayPhoto({ src, alt, caption, align = "right" }: { src: string; alt: 
   return (
     <figure className={`my-0 mb-4 ${align === "right" ? "float-right ml-6" : "float-left mr-6"} w-28 md:w-40`}>
       <div className="relative overflow-hidden border border-white/10" style={{ aspectRatio: "4/5" }}>
-        <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-cover object-top" />
-        <span className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+        <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-contain" />
+        <span className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 pointer-events-none" />
       </div>
       <figcaption className="mt-1.5 font-mono uppercase tracking-[0.2em] text-white/28" style={{ fontSize: "7px" }}>{caption}</figcaption>
     </figure>
@@ -292,7 +292,7 @@ export function AboutCardStack({ topics: _topics }: { topics: TopicData[] }) {
                   }}
                 >
                   <div style={{ width: 48, height: 48, borderRadius: 6, overflow: "hidden", border: "1px solid hsl(43 60% 50% / 0.2)", flexShrink: 0 }}>
-                    <img src={achCasual} alt="Profile portrait" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
+                    <img src={achCasual} alt="Profile portrait" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                   </div>
                   <div>
                     <div style={{ fontFamily: "ui-monospace, monospace", fontSize: "7px", letterSpacing: "0.32em", textTransform: "uppercase", color: "hsl(43 70% 55% / 0.65)", marginBottom: "0.25rem" }}>§ 01 · Personal Profile</div>

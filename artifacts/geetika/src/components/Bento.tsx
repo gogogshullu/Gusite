@@ -95,8 +95,7 @@ export function BentoCard({ item, randomize = false }: { item: BentoItem; random
               src={item.image}
               alt={item.imageAlt ?? ""}
               loading="lazy"
-              style={{ objectPosition: item.imagePosition ?? "top center" }}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
             />
             <div
               className={`absolute inset-0 transition-opacity duration-500 ${
@@ -174,9 +173,8 @@ export function BentoCard({ item, randomize = false }: { item: BentoItem; random
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="visible-popup-panel force-light !z-[1200] max-w-3xl p-0 overflow-y-auto">
           {hasImage && (
-            <div className="relative aspect-[16/9] overflow-hidden crumpled-paper leak">
-              <img src={item.image} alt={item.imageAlt ?? ""} style={{ objectPosition: item.imagePosition ?? "top center" }} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent" />
+            <div className="relative overflow-hidden crumpled-paper leak bg-navy-deep flex items-center justify-center">
+              <img src={item.image} alt={item.imageAlt ?? ""} className="w-full object-contain max-h-[60vh]" />
             </div>
           )}
           <div className="p-7 md:p-10 relative">
