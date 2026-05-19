@@ -84,8 +84,8 @@ function TilePreview({ gallery }: { gallery: EmbedItem[] }) {
           {items.map((item, i) => renderThumb(item, i))}
         </div>
       )}
-      {/* Dark blue semi-transparent overlay so text is always legible */}
-      <div className="absolute inset-0 bg-navy-deep/65" />
+      {/* Subtle overlay so images show through while text stays legible */}
+      <div className="absolute inset-0 bg-navy-deep/45" />
     </div>
   );
 }
@@ -338,7 +338,7 @@ function ArchiveTile({
                         <img
                           src={media.src}
                           alt={media.caption ?? topic.label}
-                          className="absolute inset-0 w-full h-full object-contain"
+                          className="absolute inset-0 w-full h-full object-cover object-top"
                         />
                       )}
                       {media?.type === "link" && (

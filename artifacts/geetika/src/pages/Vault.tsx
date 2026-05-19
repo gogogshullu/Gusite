@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import {
   FileText, Eye, ArrowUpRight, Mail, Globe, Linkedin, Calendar, Briefcase,
   GraduationCap, Award, MapPin, Download, BookOpen, ExternalLink,
+  Music, Film, Palette, FlaskConical, Dumbbell, Star,
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { PageShell } from "@/components/SiteChrome";
@@ -61,11 +62,14 @@ function CVFeatureBlock() {
                   Geetika Gehlot
                 </h2>
                 <p className="mt-3 font-mono text-xs uppercase tracking-[0.3em] text-ink-soft">
-                  Multidisciplinary creator · Montréal, QC
+                  Secondary V Student · Montréal, QC · Graduating 2026
+                </p>
+                <p className="mt-2 font-mono text-xs text-ink-soft/60 tracking-wide">
+                  Physics · Engineering · Multimedia · Performing Arts · Leadership
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Robotics", "STEM Research", "Music", "Writing", "Leadership", "Visual Art"].map((tag) => (
+                {["Robotics", "STEM Research", "Music", "Writing", "Leadership", "Visual Art", "Film & TV", "Physics"].map((tag) => (
                   <span key={tag} className="inline-block border border-border px-3 py-1 font-mono text-[0.6rem] uppercase tracking-widest text-ink-soft group-hover:border-gold/60 transition-colors duration-500">
                     {tag}
                   </span>
@@ -92,15 +96,16 @@ function CVFeatureBlock() {
                   <span className="h-8 w-8 rounded-full bg-gradient-to-br from-gold/40 to-navy-deep/30 border border-border shrink-0" />
                   <div>
                     <p className="font-display text-sm text-ink">Geetika Gehlot</p>
-                    <p className="font-mono text-[0.55rem] text-ink-soft">Student · she/her</p>
+                    <p className="font-mono text-[0.55rem] text-ink-soft">Secondary V Student · she/her</p>
                   </div>
                 </div>
                 <div className="rule-gold opacity-60" />
                 <div className="space-y-2">
                   {[
                     { label: "STEM & Robotics", sub: "FRC Team 7700" },
-                    { label: "VP, YMCA Youth Co-op", sub: "Leadership" },
-                    { label: "Hindustani Vocals", sub: "Classical performer" },
+                    { label: "President, YMCA Youth Co-op", sub: "Leadership 2025" },
+                    { label: "Hindustani Classical Vocals", sub: "Stage performer" },
+                    { label: "Film & Television", sub: "DD Kisan · Zee TV · Star Plus" },
                     { label: "AP Track · Montréal", sub: "Education" },
                   ].map((row) => (
                     <div key={row.label} className="flex items-start gap-2 opacity-70">
@@ -160,8 +165,7 @@ function PDFEmbedBox({
 
         <a
           href={pdfUrl}
-          target="_blank"
-          rel="noreferrer"
+          download
           className="inline-flex items-center gap-1.5 font-mono text-[0.6rem] uppercase tracking-widest text-ink-soft hover:text-gold transition-colors"
         >
           <Download className="w-3 h-3" />
@@ -262,13 +266,13 @@ function CVDocumentGrid() {
 
 function CVContent() {
   const skills = [
-    "React", "TypeScript", "Python", "Git",
+    "React", "TypeScript", "Python", "CAD (Onshape / SolidWorks)",
+    "Robotics (FRC)", "Systems Thinking", "Robotics Fabrication",
     "FL Studio", "DaVinci Resolve", "Music Production",
-    "Video Editing", "Photography", "Freelance Design",
-    "Event Hosting & Production",
-    "CAD (Onshape / SolidWorks)", "Robotics (FRC)",
-    "Machine Learning Fundamentals",
-    "Full-stack Web Development",
+    "Video Editing & Colour Grading", "Photography",
+    "Graphic & Multimedia Production", "Scriptwriting",
+    "Cinematography", "Machine Learning Fundamentals",
+    "Freelance Design", "Event Hosting & Production",
   ];
   const languages = ["English", "French", "Hindi", "Marwari"];
 
@@ -278,21 +282,21 @@ function CVContent() {
       date: "2025 – Present",
       org: "YMCA Youth Co-op (NDG-Westmount)",
       place: "Montréal, QC",
-      desc: "Led youth cooperative team. Finance, marketing, HR, and organizational development. Helped establish co-op structure and public outreach.",
+      desc: "Led a youth cooperative team in Montréal. Participated in finance, marketing, HR, and organizational development. Helped establish co-op structure and public outreach.",
     },
     {
       role: "Engineer & Programmer",
       date: "2024 – Present",
       org: "FIRST Robotics Competition — Team 7700",
       place: "Montréal, QC",
-      desc: "Robotics engineering, fabrication, CAD design in Onshape / SolidWorks, systems thinking, and competition preparation. Contributed to mechanical and programming subsystems.",
+      desc: "Worked on robotics engineering and fabrication processes. Experience with CAD, systems thinking, fabrication workflows, and competition preparation. Exposure to robotics workshop environments and technical collaboration.",
     },
     {
       role: "Studio Volunteer",
       date: "2025",
       org: "Westmount Library",
       place: "Montréal, QC",
-      desc: "Mentored children in coding and digital creativity. Assisted with creative technology activities and learning programs.",
+      desc: "Assisted children with coding and creative technology activities. Mentored younger students in digital creativity and learning.",
     },
   ];
 
@@ -302,21 +306,21 @@ function CVContent() {
       date: "2024 – 2026",
       org: "Westmount High School",
       place: "Montréal, QC",
-      desc: "Québec secondary curriculum. Strong performance in mathematics, sciences, and humanities. Jazz ensemble member. YMCA Youth Co-op leadership.",
+      desc: "Québec secondary curriculum. Strong performance in mathematics, sciences, and humanities. Jazz ensemble member. YMCA Youth Co-op leadership involvement.",
     },
     {
       role: "Advanced Secondary Program",
       date: "2022 – 2024",
       org: "Narayana Co Kaveri School",
       place: "India",
-      desc: "Rigorous STEM-focused academic stream. University-level coursework in physics, chemistry, mathematics, and biology at age 13.",
+      desc: "Studied in one of India's rigorous academic streams. Intensive STEM-focused preparation. University-level coursework in physics, chemistry, mathematics, and biology.",
     },
     {
       role: "Top-most Batch",
       date: "2022 – 2024",
       org: "Allen Career Institute",
       place: "India",
-      desc: "Elite preparation for competitive STEM examinations. Advanced Olympiad-level mathematics and engineering problem-solving.",
+      desc: "Advanced preparation environment for competitive STEM examinations. Exposure to Olympiad and engineering-level problem solving.",
     },
   ];
 
@@ -327,6 +331,79 @@ function CVContent() {
     { title: "School President & Class Valedictorian", date: "Grades 3 & 5" },
     { title: "SOF Olympiads, IOQM, JSO — High Rankings", date: "India" },
     { title: "100 History & Math, 97 Science — EMSB Exams", date: "2024" },
+    { title: "Participant in Gladrags Group Dance Finals", date: "" },
+    { title: "National Competition Recognitions", date: "Academics & Arts" },
+  ];
+
+  const academicAchievements = [
+    "Excelled AP Chemistry, AP Biology, AP Environmental Science, AP Physics C: Mechanics, and AP Physics C: Electricity & Magnetism during Grade 10, first year in Canada",
+    "Prepared for SAT, AP Calculus BC, IIT JEE Mains & Advanced, NEET, Physics Olympiads, and Mathematics Olympiads",
+    "Achieved 100 in History and Mathematics and 97 in Science on EMSB ministry examinations",
+    "Winner of TCS ION IntelliGem national competition twice",
+    "Competed in SOF Olympiads, IOQM, JSO, and RMO-related mathematics and science pathways — high rankings and certificates in all",
+    "Extensive self-study in university-level physics, chemistry, biology, and mathematics beginning around age 10–11; contacts with high-tier professors in those areas",
+    "Advanced independent study in quantum mechanics, relativity, supersymmetry, astrophysics, engineering and particle physics",
+    "Youngest attendee at Jun Ye physics seminar; conversed with Jun Ye and Kenneth Ragan, Head of McGill's Physics Department",
+    "Participated in hands-on cancer cell laboratory work including pipetting and gel electrophoresis",
+    "CPR & First Aid Certified",
+  ];
+
+  const filmCredits = [
+    "Lead role in Salaam India on DD Kisan",
+    "Appearance in Woh Apna Sa on Zee TV",
+    "Worked on Iss Pyar Ko Kya Naam Doon / Star Parivaar productions",
+    "Lead performer in multiple children's rhyme productions for ALTBalaji",
+    "Featured in 9XM 70th Independence Day promotional campaign",
+    "Appeared in Asian Paints advertisement campaigns",
+    "Voice work for Veere Di Wedding (Bollywood Blockbuster Film)",
+    "Voice work for Hindi Medium (Bollywood Blockbuster Film)",
+    "Experience in dubbing and vocal synchronization",
+  ];
+
+  const industryExposure = [
+    "Barun Sobti", "Dalljiet Kaur", "Ridhi Dogra", "Sudeep Sahir",
+    "Amit Behl", "Priyanka Sharma", "Jayshree T.", "Utkarsha Naik",
+  ];
+
+  const musicItems = [
+    "Hindustani classical singing — guru-shishya tradition, stage performance experience, advanced vocal technique development",
+    "Electric guitar · Piano / keyboard · Self-taught advanced guitar progression",
+    "Jazz ensemble performer at Westmount High School — Grade 10 jazz concerts",
+    "Bharatnatyam · Rajasthani folk dance · Freestyle dance · Gymnastics-related performance · Hula hoop performance arts · Aerobics and stage choreography",
+    "FL Studio composition and sound design — DJ mixing and event performance — Rhythm experimentation and advanced rap structure design",
+    "DaVinci Resolve video editing and colour grading",
+    "Band-it Festival 2019: Level 2 participant through Furtado's School of Music",
+  ];
+
+  const visualArts = [
+    "Canvas painting",
+    "Intricate Rangoli art across residential communities during festivals",
+    "Embroidery",
+    "Henna art",
+    "Graphic design",
+    "Fashion customization and freelance design work",
+    "Photography including moon and nature photography",
+  ];
+
+  const writingItems = [
+    "Creator of Endless Portals: An Infinite Saga of Enchanted Tales — long-form fantasy and science-fiction universe with 40+ drafted chapters",
+    "Focused on multiverse themes, fantasy systems, and large-scale fictional worldbuilding with interlooping plots",
+    "Story architecture · Dialogue writing · Character systems · Serialized storytelling",
+    "Screenwriting & Narrative Development",
+  ];
+
+  const sports = ["Badminton", "Table Tennis", "Chess", "Karate", "Abacus Mathematics", "Gymnastics", "Athletics"];
+
+  const researchInterests = [
+    "High-energy physics", "Quantum mechanics", "Particle physics",
+    "Astrophysics", "Supersymmetry", "Engineering systems", "Machine learning",
+  ];
+
+  const interests = [
+    "Quantum mechanics", "Astronomy and stargazing", "Particle physics",
+    "Engineering innovation", "Story systems", "Music production",
+    "Scientific research", "Multimedia creation", "Entrepreneurship",
+    "Technology design", "Global cuisine exploration",
   ];
 
   return (
@@ -342,13 +419,14 @@ function CVContent() {
 
         <CVSection label="About">
           <p className="text-sm leading-relaxed">Multidisciplinary student · Physics · Engineering · Music · Media · Writing · Leadership · Montréal, QC</p>
+          <p className="text-xs text-ink-soft mt-1">React · TypeScript · Python · FL Studio · DaVinci Resolve</p>
         </CVSection>
 
         <CVSection label="Contact">
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2"><Mail className="h-3.5 w-3.5 text-gold" /><a className="hover:text-gold break-all" href="mailto:geetikagehlot2009@gmail.com">geetikagehlot2009@gmail.com</a></li>
             <li className="flex items-center gap-2"><Globe className="h-3.5 w-3.5 text-gold" /><span>438-505-9956</span></li>
-            <li className="flex items-center gap-2"><Linkedin className="h-3.5 w-3.5 text-gold" /><span>linkedin.com/in/geetika-gehlot</span></li>
+            <li className="flex items-center gap-2"><Linkedin className="h-3.5 w-3.5 text-gold" /><span className="text-xs">linkedin.com/in/geetika-gehlot</span></li>
           </ul>
         </CVSection>
 
@@ -359,20 +437,19 @@ function CVContent() {
         <CVSection label="Languages">
           <div className="flex flex-wrap gap-1.5">{languages.map((s) => <CVPill key={s}>{s}</CVPill>)}</div>
         </CVSection>
+
+        <CVSection label="Research Interests">
+          <div className="flex flex-wrap gap-1.5">{researchInterests.map((s) => <CVPill key={s}>{s}</CVPill>)}</div>
+        </CVSection>
       </aside>
 
       <main className="p-6 md:p-10 space-y-10 overflow-y-auto max-h-[80vh]">
         <section>
           <CVEyebrow>Profile</CVEyebrow>
           <div className="space-y-3 text-base leading-relaxed max-w-2xl text-ink-soft">
-            <p>Multidisciplinary student with advanced knowledge in physics, mathematics, biology, computer science, engineering, music, media production, and storytelling. Born in Rajasthan, India; relocated to Montréal, Canada in October 2024.</p>
-            <p>Experience across robotics, competitive academics, scientific research exposure, performing arts, television, music production, leadership, and multimedia creation across India and Canada.</p>
+            <p>Multidisciplinary student with advanced knowledge in physics, mathematics, biology, computer science, engineering, music, media production, and storytelling. Experience: robotics, competitive academics, scientific research exposure, performing arts, television, music production, leadership, mentoring, and multimedia creation across India and Canada.</p>
+            <p>Known for combining technical depth with large-scale creative execution across scientific, artistic, and entrepreneurial domains. Born in India; relocated to Montréal, Canada in October 2024.</p>
           </div>
-        </section>
-
-        <section>
-          <CVEyebrow>Experience</CVEyebrow>
-          <div className="space-y-3">{experience.map((e) => <CVEntry key={e.role + e.org} icon={Briefcase} {...e} />)}</div>
         </section>
 
         <section>
@@ -381,20 +458,15 @@ function CVContent() {
         </section>
 
         <section>
+          <CVEyebrow>Experience & Leadership</CVEyebrow>
+          <div className="space-y-3">{experience.map((e) => <CVEntry key={e.role + e.org} icon={Briefcase} {...e} />)}</div>
+        </section>
+
+        <section>
           <CVEyebrow>Academic Achievements</CVEyebrow>
           <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
             <ul className="space-y-2">
-              {[
-                "Excelled AP Chemistry, AP Biology, AP Environmental Science, AP Physics C: Mechanics and E&M during Grade 10, first year in Canada",
-                "Prepared for SAT, AP Calculus BC, IIT JEE Mains & Advanced, NEET, Physics and Mathematics Olympiads",
-                "Achieved 100 in History and Mathematics and 97 in Science on EMSB ministry examinations",
-                "Winner of TCS ION IntelliGem national competition twice",
-                "Competed in SOF Olympiads, IOQM, JSO, and RMO — high rankings across all",
-                "Youngest attendee at Jun Ye's Anna McPherson physics seminar — McGill 2025",
-                "Hands-on cancer cell lab work: pipetting and gel electrophoresis — McGill 2025",
-                "Self-study in university-level physics, chemistry, biology, and mathematics from age 10–11",
-                "Advanced independent study: quantum mechanics, relativity, supersymmetry, astrophysics, particle physics",
-              ].map((item) => (
+              {academicAchievements.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-gold mt-1 shrink-0">·</span>
                   <span>{item}</span>
@@ -405,17 +477,28 @@ function CVContent() {
         </section>
 
         <section>
-          <CVEyebrow>Film, Television & Creative</CVEyebrow>
+          <CVEyebrow icon={Film}>Film, Television & Voice Acting</CVEyebrow>
+          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl mb-4">
+            <ul className="space-y-2">
+              {filmCredits.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-gold mt-1 shrink-0">·</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="text-xs text-ink-soft font-mono uppercase tracking-wider mb-2">Worked alongside:</p>
+          <div className="flex flex-wrap gap-1.5">
+            {industryExposure.map((s) => <CVPill key={s}>{s}</CVPill>)}
+          </div>
+        </section>
+
+        <section>
+          <CVEyebrow icon={Music}>Music & Performing Arts</CVEyebrow>
           <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
             <ul className="space-y-2">
-              {[
-                "Lead role in Salaam India on DD Kisan; Woh Apna Sa on Zee TV",
-                "Iss Pyar Ko Kya Naam Doon / Star Parivaar productions; Lead performer in ALTBalaji rhymes series (5 rhymes)",
-                "9XM 70th Independence Day promo; Asian Paints Eco Xpress advertisement",
-                "Voice work for Veere Di Wedding and Hindi Medium (Bollywood productions)",
-                "Creator of Endless Portals — 40+ drafted chapters, long-form fantasy & sci-fi universe",
-                "Sarees Bazaar UK international modelling; Gladrags Little Miss India Top Finalist",
-              ].map((item) => (
+              {musicItems.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-gold mt-1 shrink-0">·</span>
                   <span>{item}</span>
@@ -426,18 +509,17 @@ function CVContent() {
         </section>
 
         <section>
-          <CVEyebrow>Music & Performing Arts</CVEyebrow>
+          <CVEyebrow icon={Palette}>Visual Arts & Design</CVEyebrow>
+          <div className="flex flex-wrap gap-1.5">
+            {visualArts.map((s) => <CVPill key={s}>{s}</CVPill>)}
+          </div>
+        </section>
+
+        <section>
+          <CVEyebrow>Creative Writing & Storytelling</CVEyebrow>
           <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
             <ul className="space-y-2">
-              {[
-                "Hindustani classical singing — guru-shishya tradition, stage performance experience",
-                "Electric guitar · Piano / keyboard",
-                "Jazz ensemble performer at Westmount High School",
-                "Bharatnatyam · Rajasthani folk dance · Freestyle dance · Gymnastics · Hula hoop · Aerobics",
-                "FL Studio composition, sound design, and DJ mixing since 2020",
-                "DaVinci Resolve editing and colour grading since 2020",
-                "Band-it Festival 2019: Level 2 participant, Furtado's School of Music",
-              ].map((item) => (
+              {writingItems.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-gold mt-1 shrink-0">·</span>
                   <span>{item}</span>
@@ -448,7 +530,7 @@ function CVContent() {
         </section>
 
         <section>
-          <CVEyebrow>Awards & Recognition</CVEyebrow>
+          <CVEyebrow icon={Award}>Awards & Recognition</CVEyebrow>
           <div className="grid sm:grid-cols-2 gap-3">
             {certs.map((c) => (
               <div key={c.title} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
@@ -463,20 +545,59 @@ function CVContent() {
         </section>
 
         <section>
-          <CVEyebrow>Research & Scientific Interests</CVEyebrow>
+          <CVEyebrow icon={FlaskConical}>Research & Scientific Interests</CVEyebrow>
           <div className="flex flex-wrap gap-1.5">
-            {[
-              "High-energy physics", "Quantum mechanics", "Particle physics",
-              "Astrophysics", "Supersymmetry", "Engineering systems",
-              "Cancer cell biology", "Machine learning",
-            ].map((s) => <CVPill key={s}>{s}</CVPill>)}
+            {researchInterests.map((s) => <CVPill key={s}>{s}</CVPill>)}
           </div>
         </section>
 
         <section>
-          <CVEyebrow>Sports & Activities</CVEyebrow>
+          <CVEyebrow icon={Dumbbell}>Sports & Activities</CVEyebrow>
           <div className="flex flex-wrap gap-1.5">
-            {["Badminton", "Table Tennis", "Chess", "Karate", "Gymnastics", "Athletics"].map((s) => <CVPill key={s}>{s}</CVPill>)}
+            {sports.map((s) => <CVPill key={s}>{s}</CVPill>)}
+          </div>
+        </section>
+
+        <section>
+          <CVEyebrow>Cultural & International Experience</CVEyebrow>
+          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
+            <ul className="space-y-2">
+              {[
+                "Born in India; relocated to Montréal, Canada in October 2024",
+                "Experience adapting between Indian and Québec educational and cultural systems",
+                "Strong engagement with Rajasthani cultural traditions and arts",
+                "Preference for Québec French learning and integration",
+              ].map(item => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-gold mt-1 shrink-0">·</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <CVEyebrow icon={Star}>Interests</CVEyebrow>
+          <div className="flex flex-wrap gap-1.5">
+            {interests.map((s) => <CVPill key={s}>{s}</CVPill>)}
+          </div>
+        </section>
+
+        <section>
+          <CVEyebrow>Mentorship & Academic Guidance</CVEyebrow>
+          <div className="space-y-2 text-sm text-ink-soft leading-relaxed max-w-2xl">
+            <ul className="space-y-2">
+              {[
+                "Guidance from Amandeep Bakshi, Arpi Hamalian, and Ailie Cleghorn",
+                "Connected with Professor Mariana Frank regarding particle physics mentorship and research direction",
+              ].map(item => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-gold mt-1 shrink-0">·</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </main>
@@ -487,8 +608,13 @@ function CVContent() {
 function CVSection({ label, children }: { label: string; children: ReactNode }) {
   return <div className="mb-6"><p className="eyebrow mb-2">{label}</p>{children}</div>;
 }
-function CVEyebrow({ children }: { children: ReactNode }) {
-  return <p className="eyebrow mb-4">{children}</p>;
+function CVEyebrow({ children, icon: Icon }: { children: ReactNode; icon?: React.ComponentType<{ className?: string }> }) {
+  return (
+    <div className="flex items-center gap-2 mb-4">
+      {Icon && <Icon className="h-3.5 w-3.5 text-gold" />}
+      <p className="eyebrow">{children}</p>
+    </div>
+  );
 }
 function CVPill({ children }: { children: ReactNode }) {
   return <span className="inline-block rounded-full border border-border bg-card px-2.5 py-1 text-xs text-ink">{children}</span>;
