@@ -37,13 +37,13 @@ const HERO_SLIDES: Slide[] = [
     objectPosition: "top center",
   },
   {
-    src: "/photo-lab-pipette2.jpg",
-    alt: "Geetika with the McGill cancer cell research lab team",
+    src: "/photo-mcgill-engineering.jpg",
+    alt: "Geetika with the McGill Space engineering models",
     tone: "light",
-    eyebrow: "Passion for Biology · McGill Cancer Cell Lab · 2025",
+    eyebrow: "Passion for Engineering · McGill · 2025",
     title: "",
-    body: "Gel electrophoresis, Zeiss microscopy, pipetting",
-    objectPosition: "center 20%",
+    body: "Early Interest in space technology sparked independent learning and participation in robotics competitions",
+    objectPosition: "center center",
   },
   {
     src: "/photo-crown.jpg",
@@ -70,8 +70,7 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "Micro details & aesthetics",
     title: "",
     body: "Multidisciplinary Visual artist with mastery in intricate arts & designs",
-    objectPosition: "center center",
-    transform: "rotate(90deg)"
+    objectPosition: "center 28%",
   },
 ];
 
