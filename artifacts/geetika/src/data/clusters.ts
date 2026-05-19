@@ -153,7 +153,7 @@ export const CLUSTERS: Cluster[] = [
         ]),
       topic("Physics Journey", "From curiosity to self-directed study.",
         "Independent study in physics began during early schooling years, initially driven by curiosity in space and fundamental forces. Continued development includes mechanics, electromagnetism, quantum concepts, and introductory university-level material. Research sessions go late but that's passion",
-        { type: "image", src: "/photo-quantum-research.jpg", caption: "Late-Night Physics Research, Quantum Entanglement Study" }),
+        { type: "image", src: "/photo-meteor-eta-aquarii.jpg", caption: "Late-Night Physics Research, Quantum Entanglement Study" }),
       topic("Chandrayaan-3 & Space", "Next to India's lunar lander, and inside a spacesuit.",
         "Visited a science museum exhibition showcasing a scale model of the Vikram lander from Chandrayaan-3, India's historic mission that successfully landed on the Moon's south pole on August 23, 2023, making India the first country to reach that region. Second photo with face in the astronaut cutout frame at the same exhibition.",
         { type: "image", src: "/photo-chandrayaan3.jpg", caption: "With Chandrayaan-3 Vikram Lander Model, Science Museum, India 2024" },
