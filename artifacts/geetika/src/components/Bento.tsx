@@ -171,7 +171,7 @@ export function BentoCard({ item, randomize = false }: { item: BentoItem; random
 
       {/* Click-to-detail modal */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="visible-popup-panel force-light !z-[1200] max-w-3xl p-0 overflow-y-auto">
+        <DialogContent className="visible-popup-panel !z-[1200] max-w-3xl p-0 overflow-y-auto bg-navy-deep border-gold/20">
           {hasImage && (
             <div className="relative overflow-hidden crumpled-paper leak bg-navy-deep flex items-center justify-center">
               <img src={item.image} alt={item.imageAlt ?? ""} className="w-full object-contain max-h-[60vh]" />
@@ -179,17 +179,17 @@ export function BentoCard({ item, randomize = false }: { item: BentoItem; random
           )}
           <div className="p-7 md:p-10 relative">
             {item.eyebrow && <p className="label-gold mb-3">{item.eyebrow}</p>}
-            <DialogTitle className="font-display text-xl md:text-2xl lg:text-3xl text-ink leading-tight pr-8">
+            <DialogTitle className="font-display text-xl md:text-2xl lg:text-3xl text-paper-contrast leading-tight pr-8">
               {item.title}
             </DialogTitle>
             {item.meta && (
-              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-muted-foreground mt-3">
+              <p className="font-mono text-[0.65rem] uppercase tracking-widest text-gold/60 mt-3">
                 {item.meta}
               </p>
             )}
             <div className="rule-gold my-6" />
             <DialogDescription asChild>
-              <div className="text-ink-soft text-base md:text-lg leading-relaxed font-display [&_p]:mb-4">
+              <div className="text-paper-contrast/80 text-base md:text-lg leading-relaxed font-display [&_p]:mb-4">
                 {item.detail ?? item.blurb ?? "More detail coming soon."}
               </div>
           </DialogDescription>

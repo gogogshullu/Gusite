@@ -296,7 +296,7 @@ function ArchiveTile({
       </button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className={`${dialogMaxW} p-0 overflow-hidden bg-paper`}>
+        <DialogContent className={`${dialogMaxW} p-0 overflow-hidden bg-navy-deep border-gold/20`}>
           {hasMedia ? (
             /* ── Split layout: left media + right text ── */
             <div className="grid md:grid-cols-[1fr,1.1fr]">
@@ -409,13 +409,13 @@ function ArchiveTile({
 
               {/* RIGHT: text panel */}
               <div className="p-7 md:p-9 flex flex-col justify-center overflow-y-auto max-h-[440px] md:max-h-none">
-                <DialogTitle className="font-display text-2xl md:text-3xl leading-tight text-ink mb-2">
+                <DialogTitle className="font-display text-2xl md:text-3xl leading-tight text-paper-contrast mb-2">
                   {topic.label}
                 </DialogTitle>
-                <p className="font-accent italic text-base text-ink-soft mb-5">{topic.blurb}</p>
-                <div className="h-px bg-border mb-5" />
+                <p className="font-accent italic text-base text-gold/80 mb-5">{topic.blurb}</p>
+                <div className="h-px bg-gold/20 mb-5" />
                 <DialogDescription asChild>
-                  <div className="text-sm md:text-base leading-relaxed text-ink-soft font-display">
+                  <div className="text-sm md:text-base leading-relaxed text-paper-contrast/75 font-display">
                     {topic.detail.split("\n").map((p, i) => (
                       <p key={i} className={i > 0 ? "mt-3" : ""}>
                         {p}
@@ -428,13 +428,13 @@ function ArchiveTile({
           ) : (
             /* ── Text-only layout (no media) ── */
             <div className="p-8 md:p-10 max-h-[80vh] overflow-y-auto">
-              <DialogTitle className="font-display text-2xl md:text-3xl leading-tight text-ink mb-2">
+              <DialogTitle className="font-display text-2xl md:text-3xl leading-tight text-paper-contrast mb-2">
                 {topic.label}
               </DialogTitle>
-              <p className="font-accent italic text-base text-ink-soft mb-5">{topic.blurb}</p>
-              <div className="h-px bg-border mb-5" />
+              <p className="font-accent italic text-base text-gold/80 mb-5">{topic.blurb}</p>
+              <div className="h-px bg-gold/20 mb-5" />
               <DialogDescription asChild>
-                <div className="text-sm md:text-base leading-relaxed text-ink-soft font-display">
+                <div className="text-sm md:text-base leading-relaxed text-paper-contrast/75 font-display">
                   {topic.detail.split("\n").map((p, i) => (
                     <p key={i} className={i > 0 ? "mt-3" : ""}>
                       {p}
