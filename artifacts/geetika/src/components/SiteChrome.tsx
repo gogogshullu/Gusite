@@ -205,7 +205,7 @@ export const SiteFooter = forwardRef<HTMLElement>((_, ref) => {
       <div className="border-t border-paper/10">
         <div className="container py-3 flex flex-col md:flex-row justify-between gap-2 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-paper/50">
           <span>© {new Date().getFullYear()} Geetika Gehlot · Montréal</span>
-          <span> · Volume One · Ongoing</span>
+          <span> · </span>
         </div>
       </div>
     </footer>
