@@ -291,7 +291,7 @@ const Index = () => {
               </p>
             </div>
           </div>
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 mb-2">
             {[
               ["I", "About", "Me"],
               ["II", "Academics", "& Excellences"],
@@ -301,17 +301,18 @@ const Index = () => {
             ].map(([n, t, d], idx) => (
               <div
                 key={t}
-                className="border-t border-gold/40 pt-4"
+                className="border-t border-gold/40 pt-5 pb-2"
                 data-reveal
                 data-reveal-delay={String(idx * 100)}
               >
                 <p className="font-mono text-xs text-gold tracking-widest">{n}</p>
-                <h3 className="font-display text-2xl mt-2">{t}</h3>
+                <h3 className="font-display text-2xl mt-2 mb-1">{t}</h3>
                 <p className="text-paper/70 text-base mt-3 leading-relaxed font-accent">{d}</p>
               </div>
             ))}
           </div>
-          <ol className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border" data-reveal>
+          <div className="h-px bg-gold/15 my-8 md:my-12" />
+          <ol className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5" data-reveal>
             {CLUSTERS.map((c) => {
               const CI = c.icon;
               return (

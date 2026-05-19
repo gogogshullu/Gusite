@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  Mail, ArrowUpRight, Linkedin, Github, Send, MapPin,
+  Mail, ArrowUpRight, Github, Send, MapPin,
 } from "lucide-react";
 import { PageShell } from "@/components/SiteChrome";
 import { useReveal } from "@/hooks/useReveal";
@@ -58,10 +58,9 @@ function ContactBlock() {
   };
 
   const channels: Array<{ icon: IconCmp; label: string; value: string; href?: string; num: string }> = [
-    { icon: Mail,     label: "Email",    value: CONTACT_EMAIL,         href: `mailto:${CONTACT_EMAIL}`, num: "01" },
-    { icon: Linkedin, label: "LinkedIn", value: "/in/geetika-gehlot",  href: "https://www.linkedin.com/in/geetika-gehlot", num: "02" },
-    { icon: Github,   label: "GitHub",   value: "@geetika",            href: "https://github.com/geetika", num: "03" },
-    { icon: MapPin,   label: "Based in", value: "Montréal, QC",                                          num: "04" },
+    { icon: Mail,   label: "Email",    value: CONTACT_EMAIL,  href: `mailto:${CONTACT_EMAIL}`, num: "01" },
+    { icon: Github, label: "GitHub",   value: "@geetika",     href: "https://github.com/geetika", num: "02" },
+    { icon: MapPin, label: "Based in", value: "Montréal, QC",                                   num: "03" },
   ];
 
   return (

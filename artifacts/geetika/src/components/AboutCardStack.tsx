@@ -34,120 +34,264 @@ function EssayPhoto({ src, alt, caption, align = "right" }: { src: string; alt: 
 }
 
 const ESSAY_H3 = { fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(13px,1.1vw,15px)", fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "hsl(43 70% 58%)", marginBottom: "1rem", opacity: 0.85 };
+const ESSAY_SUB = { fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(11px,0.9vw,13px)", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "hsl(220 15% 50%)", marginBottom: "0.4rem", marginTop: "1.2rem" };
 const ESSAY_P = { fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(15px,1.25vw,17px)", lineHeight: 1.82, color: "hsl(220 15% 78%)", marginBottom: "1rem" };
 const ESSAY_LI = { fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(14px,1.1vw,16px)", lineHeight: 1.72, color: "hsl(220 15% 72%)", marginBottom: "0.4rem", paddingLeft: "1rem", borderLeft: "1px solid hsl(43 60% 55% / 0.18)" };
+
+function BulletList({ items }: { items: string[] }) {
+  return (
+    <div style={{ marginBottom: "0.75rem" }}>
+      {items.map(item => <p key={item} style={ESSAY_LI}>{item}</p>)}
+    </div>
+  );
+}
 
 function Essay() {
   return (
     <article style={{ maxWidth: "760px", margin: "0 auto" }}>
 
+      {/* PROFILE */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h3 style={ESSAY_H3}>I. Profile</h3>
-        <EssayPhoto src={achCasual} alt="Geetika Gehlot, Mumbai, 2019" caption="Montréal, 2024" align="right" />
+        <h3 style={ESSAY_H3}>Profile</h3>
+        <EssayPhoto src={achCasual} alt="Geetika Gehlot, Montréal 2024" caption="Montréal, 2024" align="right" />
         <p style={ESSAY_P}>
           <span style={{ float: "left", fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(3.2rem,5vw,4.2rem)", lineHeight: 0.78, fontWeight: 700, color: "hsl(43 78% 62%)", marginRight: "0.18em", marginTop: "0.08em" }}>M</span>
           ultidisciplinary student with advanced knowledge in physics, mathematics, biology, computer science, engineering, music, media production, and storytelling. Experience: robotics, competitive academics, scientific research exposure, performing arts, television, music production, leadership, mentoring, and multimedia creation across India and Canada.
         </p>
-        <p style={ESSAY_P}>
-          Known for combining technical depth with large-scale creative execution across scientific, artistic, and entrepreneurial domains. Born in India; relocated to Montréal, Canada in October 2024.
-        </p>
-        <p style={ESSAY_P}>
-          Languages: English, French, Hindi, and Marwari: the oral dialect of Rajasthan carried in the throat rather than on any page. Each language organises the world differently; living among them made every framework feel like a choice, not a fact.
-        </p>
+        <p style={ESSAY_P}>Known for combining technical depth with large-scale creative execution across scientific, artistic, and entrepreneurial domains.</p>
       </section>
 
+      {/* EDUCATION */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h3 style={ESSAY_H3}>II. Education</h3>
-        <EssayPhoto src={achAbacus} alt="Academic achievements and medals" caption="Mental math!" align="left" />
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Westmount High School, Montréal</strong>: Secondary V, expected graduation 2026. Québec secondary education system. Strong performance in mathematics, sciences, and humanities. Member of jazz music ensemble. YMCA Youth Co-op leadership involvement.
-        </p>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Narayana Co Kaveri School</strong>: Advanced secondary academic program. Studied in one of India's rigorous academic streams. Intensive STEM-focused preparation with university-level coursework at age thirteen.
-        </p>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Allen Career Institute, Top-most Batch</strong>: Advanced preparation environment for competitive STEM examinations. Exposure to Olympiad and engineering-level problem solving from the most elite preparatory cohort in India.
-        </p>
+        <h3 style={ESSAY_H3}>Education</h3>
+        <EssayPhoto src={achAbacus} alt="Academic achievements and medals" caption="Mental math, always" align="left" />
+        <p style={{ ...ESSAY_SUB, marginTop: 0 }}>Westmount High School</p>
+        <BulletList items={[
+          "Secondary V: Expected Graduation: 2026",
+          "Québec secondary education system",
+          "Strong performance in mathematics, sciences, and humanities",
+          "Member of jazz music ensemble",
+          "YMCA Youth Co-op leadership involvement",
+        ]} />
+        <p style={ESSAY_SUB}>Narayana Co Kaveri School</p>
+        <BulletList items={[
+          "Advanced secondary academic program",
+          "Studied in one of India's rigorous academic streams",
+          "Intensive STEM-focused preparation",
+        ]} />
+        <p style={ESSAY_SUB}>Allen Career Institute: Top-most Batch</p>
+        <BulletList items={[
+          "Advanced preparation environment for competitive STEM examinations",
+          "Exposure to Olympiad and engineering-level problem solving",
+        ]} />
       </section>
 
+      {/* ACADEMIC ACHIEVEMENTS */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h3 style={ESSAY_H3}>III. Academic Achievements</h3>
+        <h3 style={ESSAY_H3}>Academic Achievements</h3>
         <EssayPhoto src={achCrown} alt="Recognition and awards portrait" caption="School President & Class Valedictorian, Twice" align="right" />
-        <p style={ESSAY_P}>
-          Excelled AP Chemistry, AP Biology, AP Environmental Science, AP Physics C: Mechanics, and AP Physics C: Electricity & Magnetism during Grade 10: first year in Canada. Prepared for SAT, AP Calculus BC, IIT JEE Mains & Advanced, NEET, Physics Olympiads, and Mathematics Olympiads.
-        </p>
-        <p style={ESSAY_P}>
-          Achieved 100 in History and Mathematics and 97 in Science on EMSB ministry examinations. Winner of TCS ION IntelliGem national competition twice. Competed in SOF Olympiads, IOQM, JSO, and RMO-related mathematics and science pathways with high rankings and certificates in all.
-        </p>
-        <p style={ESSAY_P}>
-          Youngest attendee at Jun Ye's Anna McPherson physics seminar at McGill, 2025; conversed with Jun Ye and Kenneth Ragan, Head of McGill's Physics Department. Participated in hands-on cancer cell laboratory work including pipetting and gel electrophoresis. CPR & First Aid Certified.
-        </p>
-        <div style={{ marginBottom: "1rem" }}>
-          <p style={{ ...ESSAY_P, marginBottom: "0.5rem", color: "hsl(43 70% 58%)", fontSize: "clamp(13px,1vw,14px)", letterSpacing: "0.1em" }}>Research & Scientific Interests:</p>
-          {["High-energy physics", "Quantum mechanics", "Particle physics", "Astrophysics", "Supersymmetry", "Engineering systems", "Machine learning"].map(item => (
-            <p key={item} style={ESSAY_LI}>{item}</p>
-          ))}
-        </div>
-        <p style={{ ...ESSAY_P, fontSize: "clamp(13px,1vw,14px)", color: "hsl(220 15% 55%)" }}>
-          Guidance from Amandeep Bakshi, Arpi Hamalian, and Ailie Cleghorn. Connected with Professor Mariana Frank regarding particle physics mentorship and research direction.
-        </p>
+        <BulletList items={[
+          "Excelled AP Chemistry, AP Biology, AP Environmental Science, AP Physics C: Mechanics, and AP Physics C: Electricity & Magnetism during Grade 10, first year in Canada",
+          "Prepared for SAT, AP Calculus BC, IIT JEE Mains & Advanced, NEET, Physics Olympiads, and Mathematics Olympiads",
+          "Achieved 100 in History and Mathematics and 97 in Science on EMSB ministry examinations",
+          "Winner of TCS ION IntelliGem national competition twice",
+          "Competed in SOF Olympiads, IOQM, JSO, and RMO-related mathematics and science pathways and achieved high rankings and certificates in all",
+          "Extensive self-study in university-level physics, chemistry, biology, and mathematics beginning around age 10–11, contacts with high-tier professors in those areas",
+          "Advanced independent study in quantum mechanics, relativity, supersymmetry, astrophysics, engineering and particle physics",
+          "Youngest attendee at Jun Ye physics seminar, conversed with Jun Ye and Kenneth Ragan, Head of McGill's Physics Department",
+          "Participated in hands-on cancer cell laboratory work including pipetting and gel electrophoresis",
+          "CPR & First Aid Certified",
+        ]} />
+
+        <p style={ESSAY_SUB}>Research &amp; Scientific Interests</p>
+        <BulletList items={["High-energy physics", "Quantum mechanics", "Particle physics", "Astrophysics", "Supersymmetry", "Engineering systems", "Machine learning"]} />
+
+        <p style={ESSAY_SUB}>Mentorship &amp; Academic Guidance</p>
+        <BulletList items={[
+          "Guidance from Amandeep Bakshi, Arpi Hamalian, and Ailie Cleghorn",
+          "Connected with Professor Mariana Frank regarding particle physics mentorship and research direction",
+        ]} />
       </section>
 
+      {/* ENGINEERING */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h3 style={ESSAY_H3}>IV. Engineering, Robotics &amp; Technical Work</h3>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>FIRST Robotics Competition: Team 7700</strong>: Worked on robotics engineering and fabrication processes. Experience with CAD, systems thinking, fabrication workflows, and competition preparation. Exposure to robotics workshop environments and technical collaboration.
-        </p>
-        <p style={ESSAY_P}>
-          Technical Skills: React · TypeScript · Python · CAD · Robotics fabrication · Systems thinking · Multimedia systems · Machine learning fundamentals.
-        </p>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Software & Production:</strong> FL Studio music production since 2020 · DaVinci Resolve video editing and colour grading · Graphic and multimedia production, cinematography · Photography and visual editing · Scriptwriting.
-        </p>
-        <p style={ESSAY_P}>
-          Creator of <em>Endless Portals: An Infinite Saga of Enchanted Tales</em>: a long-form fantasy and science-fiction universe with over 40 drafted chapters across interconnected storylines. Focused on multiverse themes, fantasy systems, and large-scale fictional worldbuilding.
-        </p>
+        <h3 style={ESSAY_H3}>Engineering, Robotics &amp; Technical Work</h3>
+        <p style={{ ...ESSAY_SUB, marginTop: 0 }}>FIRST Robotics Competition: Team 7700</p>
+        <BulletList items={[
+          "Worked on robotics engineering and fabrication processes",
+          "Experience with CAD, systems thinking, fabrication workflows, and competition preparation",
+          "Exposure to robotics workshop environments and technical collaboration",
+        ]} />
+
+        <p style={ESSAY_SUB}>Technical Skills</p>
+        <BulletList items={["React", "TypeScript", "Python", "CAD", "Robotics fabrication", "Systems thinking", "Multimedia systems", "Machine learning fundamentals"]} />
+
+        <p style={ESSAY_SUB}>Software &amp; Production</p>
+        <BulletList items={[
+          "FL Studio music production since 2020",
+          "DaVinci Resolve video editing, colour grading",
+          "Graphic and multimedia production, cinematography",
+          "Photography and visual editing",
+          "Scriptwriting",
+        ]} />
       </section>
 
+      {/* LEADERSHIP */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h3 style={ESSAY_H3}>V. Film, Television &amp; Music</h3>
-        <EssayPhoto src={achSinging} alt="Singing performance on stage" caption="Hindustani Classical Music Singing, taught by Usha Timothy" align="left" />
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Television & Acting Credits:</strong> Lead role in Salaam India on DD Kisan · Appearance in Woh Apna Sa on Zee TV · Worked on Iss Pyar Ko Kya Naam Doon / Star Parivaar productions · Lead performer in multiple children's rhyme productions for ALTBalaji · Featured in 9XM 70th Independence Day promotional campaign · Appeared in Asian Paints advertisement campaigns.
-        </p>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Dubbing & Voice Acting:</strong> Voice work for Veere Di Wedding and Hindi Medium: both Bollywood blockbusters. Experience in dubbing and vocal synchronization.
-        </p>
-        <p style={{ ...ESSAY_P, fontSize: "clamp(13px,1vw,14px)", color: "hsl(220 15% 55%)" }}>
-          Worked alongside: Barun Sobti · Dalljiet Kaur · Ridhi Dogra · Sudeep Sahir · Amit Behl · Priyanka Sharma · Jayshree T. · Utkarsha Naik.
-        </p>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Vocal Performance:</strong> Hindustani classical singing · Stage performance experience · Advanced vocal technique development.
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}> Instruments:</strong> Electric guitar · Piano / keyboard · Self-taught advanced guitar progression.
-        </p>
-        <p style={ESSAY_P}>
-          Jazz ensemble performer at Westmount High School. Bharatnatyam · Rajasthani folk dance · Freestyle dance · Gymnastics · Hula hoop performance arts · Aerobics and stage choreography. FL Studio composition and DJ mixing and event performance. Band-it Festival 2019: Level 2 participant through Furtado's School of Music.
-        </p>
+        <h3 style={ESSAY_H3}>Leadership &amp; Community Work</h3>
+        <p style={{ ...ESSAY_SUB, marginTop: 0 }}>YMCA Youth Co-op: President (NDG-Westmount 2025)</p>
+        <BulletList items={[
+          "Led a youth cooperative team in Montréal",
+          "Participated in finance, marketing, HR, and organizational development",
+          "Helped establish the co-op structure and public outreach",
+        ]} />
+
+        <p style={ESSAY_SUB}>Westmount Library Studio Volunteering</p>
+        <BulletList items={[
+          "Assisted children with coding and creative technology activities",
+          "Mentored younger students in digital creativity and learning",
+        ]} />
+
+        <p style={ESSAY_SUB}>Mentoring</p>
+        <BulletList items={[
+          "Peer mentoring and collaborative academic support",
+          "Strong communication and leadership experience from school and extracurricular environments",
+        ]} />
       </section>
 
+      {/* CREATIVE WRITING */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h3 style={ESSAY_H3}>VI. Visual Arts, Leadership &amp; Beyond</h3>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>Visual Arts & Design:</strong> Canvas painting · Intricate Rangoli art across residential communities during festivals · Embroidery · Henna art · Graphic design · Fashion customization and freelance design work · Photography including moon and nature photography.
-        </p>
-        <p style={ESSAY_P}>
-          <strong style={{ color: "hsl(43 70% 62%)", fontWeight: 600 }}>YMCA Youth Co-op: President (NDG-Westmount 2025)</strong>: Led a youth cooperative team in Montréal. Participated in finance, marketing, HR, and organizational development. Helped establish the co-op structure and public outreach. Westmount Library Studio Volunteering: assisted children with coding and creative technology activities.
-        </p>
-        <p style={ESSAY_P}>
-          Hundreds of school-level and academic awards across multiple disciplines. School President and Female Class Valedictorian in Grades 3 and 5. Top finalist in Gladrags Little Miss India. Sports: badminton, table tennis, chess, karate.
-        </p>
-        <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(14px,1.1vw,16px)", lineHeight: 1.82, fontStyle: "italic", color: "hsl(43 60% 55%)", borderLeft: "2px solid hsl(43 60% 55% / 0.35)", paddingLeft: "1.25rem", marginBottom: "1rem" }}>
-          Interests: Quantum mechanics · Astronomy and stargazing · Particle physics · Engineering innovation · Story systems · Music production · Scientific research · Multimedia creation · Entrepreneurship · Technology design · Global cuisine exploration.
-        </p>
-        <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(14px,1.1vw,16px)", lineHeight: 1.82, fontStyle: "italic", color: "hsl(43 60% 55%)", borderLeft: "2px solid hsl(43 60% 55% / 0.35)", paddingLeft: "1.25rem", marginBottom: "3rem" }}>
-          A life built on curiosity across every domain: science, engineering, music, story, screen, and beyond. Every discipline is a tool. The work is always, in some sense, not yet finished.
-        </p>
+        <h3 style={ESSAY_H3}>Creative Writing &amp; Storytelling</h3>
+        <p style={{ ...ESSAY_SUB, marginTop: 0 }}>Endless Portals: An Infinite Saga of Enchanted Tales</p>
+        <BulletList items={[
+          "Creator of a long-form fantasy and science-fiction universe",
+          "Wrote over 40+ drafted chapters across interconnected storylines",
+          "Focused on multiverse themes, fantasy systems, and large-scale fictional worldbuilding with interlooping plots in stories",
+        ]} />
+
+        <p style={ESSAY_SUB}>Screenwriting &amp; Narrative Development</p>
+        <BulletList items={["Story architecture", "Dialogue writing", "Character systems", "Serialized storytelling"]} />
       </section>
+
+      {/* FILM & MEDIA */}
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h3 style={ESSAY_H3}>Film, Television &amp; Media</h3>
+        <EssayPhoto src={achSinging} alt="Singing performance on stage" caption="Hindustani Classical Music Singing" align="left" />
+
+        <p style={{ ...ESSAY_SUB, marginTop: 0 }}>Television &amp; Acting Credits</p>
+        <BulletList items={[
+          "Lead role in Salaam India on DD Kisan",
+          "Appearance in Woh Apna Sa on Zee TV",
+          "Worked on Iss Pyar Ko Kya Naam Doon / Star Parivaar productions",
+          "Lead performer in multiple children's rhyme productions for ALTBalaji",
+          "Featured in 9XM 70th Independence Day promotional campaign",
+          "Appeared in Asian Paints advertisement campaigns",
+        ]} />
+
+        <p style={ESSAY_SUB}>Dubbing &amp; Voice Acting</p>
+        <BulletList items={[
+          "Voice work for Veere Di Wedding, Bollywood Blockbuster Film",
+          "Voice work for Hindi Medium, Bollywood Blockbuster Film",
+          "Experience in dubbing and vocal synchronization",
+        ]} />
+
+        <p style={ESSAY_SUB}>Industry Exposure</p>
+        <p style={{ ...ESSAY_P, fontSize: "clamp(13px,1vw,14px)", marginBottom: "0.4rem" }}>Worked alongside or appeared with figures associated with Indian television productions including:</p>
+        <BulletList items={["Barun Sobti", "Dalljiet Kaur", "Ridhi Dogra", "Sudeep Sahir", "Amit Behl", "Priyanka Sharma", "Jayshree T.", "Utkarsha Naik"]} />
+      </section>
+
+      {/* MUSIC */}
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h3 style={ESSAY_H3}>Music &amp; Performing Arts</h3>
+
+        <p style={{ ...ESSAY_SUB, marginTop: 0 }}>Vocal Performance</p>
+        <BulletList items={["Hindustani classical singing", "Stage performance experience", "Advanced vocal technique development"]} />
+
+        <p style={ESSAY_SUB}>Instruments</p>
+        <BulletList items={["Electric guitar", "Piano / keyboard", "Self-taught advanced guitar progression"]} />
+
+        <p style={ESSAY_SUB}>Jazz Ensemble</p>
+        <BulletList items={["Participated in Grade 10 jazz concerts at Westmount High School"]} />
+
+        <p style={ESSAY_SUB}>Dance &amp; Performance</p>
+        <BulletList items={["Bharatnatyam", "Rajasthani folk dance", "Freestyle dance", "Gymnastics-related performance", "Hula hoop performance arts", "Aerobics and stage choreography"]} />
+
+        <p style={ESSAY_SUB}>Music Production &amp; DJ Work</p>
+        <BulletList items={[
+          "FL Studio composition and sound design",
+          "DJ mixing and event performance",
+          "Rhythm experimentation and advanced rap structure design",
+        ]} />
+
+        <p style={ESSAY_SUB}>Music Recognition</p>
+        <BulletList items={["Band-it Festival 2019: Level 2 participant through Furtado's School of Music"]} />
+      </section>
+
+      {/* VISUAL ARTS */}
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h3 style={ESSAY_H3}>Visual Arts &amp; Design</h3>
+        <BulletList items={[
+          "Canvas painting",
+          "Intricate Rangoli art across residential communities during festivals",
+          "Embroidery",
+          "Henna art",
+          "Graphic design",
+          "Fashion customization and freelance design work",
+          "Photography including moon and nature photography",
+        ]} />
+
+        <p style={ESSAY_SUB}>Entrepreneurship &amp; Freelance Work</p>
+        <BulletList items={[
+          "Freelance design projects including apparel and accessories",
+          "Event hosting and paid performance/event coordination experience",
+          "Multimedia branding and digital content creation",
+        ]} />
+      </section>
+
+      {/* SPORTS */}
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h3 style={ESSAY_H3}>Sports &amp; Activities</h3>
+        <BulletList items={["Badminton", "Table tennis", "Chess", "Karate", "Abacus mathematics", "Physical coordination and freestyle performance activities"]} />
+      </section>
+
+      {/* AWARDS */}
+      <section style={{ marginBottom: "2.5rem" }}>
+        <h3 style={ESSAY_H3}>Awards &amp; Recognition</h3>
+        <BulletList items={[
+          "Hundreds of school-level and academic awards across multiple disciplines",
+          "School President and Female Class Valedictorian in Grades 3 and 5",
+          "Top finalist in Gladrags Little Miss India",
+          "Participant in Gladrags group dance finals",
+          "National competition recognitions in academics and arts",
+        ]} />
+
+        <p style={ESSAY_SUB}>Cultural &amp; International Experience</p>
+        <BulletList items={[
+          "Born in India; relocated to Montréal, Canada in October 2024",
+          "Experience adapting between Indian and Québec educational and cultural systems",
+          "Strong engagement with Rajasthani cultural traditions and arts",
+          "Preference for Québec French learning and integration",
+        ]} />
+      </section>
+
+      {/* INTERESTS */}
+      <section style={{ marginBottom: "3rem" }}>
+        <h3 style={ESSAY_H3}>Interests</h3>
+        <BulletList items={[
+          "Quantum mechanics",
+          "Astronomy and stargazing",
+          "Particle physics",
+          "Engineering innovation",
+          "Story systems",
+          "Music production",
+          "Scientific research",
+          "Multimedia creation",
+          "Entrepreneurship",
+          "Technology design",
+          "Global cuisine exploration",
+        ]} />
+      </section>
+
     </article>
   );
 }

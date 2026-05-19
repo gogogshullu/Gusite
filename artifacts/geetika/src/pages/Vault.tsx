@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import {
-  FileText, Eye, ArrowUpRight, Mail, Globe, Linkedin, Calendar, Briefcase,
+  FileText, Eye, ArrowUpRight, Mail, Globe, Calendar, Briefcase,
   GraduationCap, Award, MapPin, Download, BookOpen, ExternalLink,
   Music, Film, Palette, FlaskConical, Dumbbell, Star,
 } from "lucide-react";
@@ -241,25 +241,6 @@ function CVDocumentGrid() {
         />
       </div>
 
-      {/* LinkedIn tile */}
-      <a
-        href="https://www.linkedin.com/in/geetika-gehlot"
-        target="_blank"
-        rel="noreferrer"
-        className="fancy-tile group block border border-border bg-paper hover:border-gold transition-all duration-700 ease-cinematic hover:-translate-y-1 overflow-hidden p-6"
-      >
-        <div className="flex items-start justify-between mb-6">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 text-gold border border-gold/20">
-            <Linkedin className="h-4 w-4" />
-          </span>
-          <span className="font-mono text-[0.55rem] uppercase tracking-widest border border-border px-2 py-1 text-ink-soft group-hover:border-gold/50 transition-colors duration-500">
-            External
-          </span>
-        </div>
-        <p className="font-display text-lg text-ink group-hover:text-gold transition-colors duration-300 leading-tight">LinkedIn Profile</p>
-        <p className="mt-1 font-mono text-[0.6rem] uppercase tracking-wider text-ink-soft">Connect or view professional timeline</p>
-        <ArrowUpRight className="mt-4 h-4 w-4 text-ink-soft group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" />
-      </a>
     </div>
   );
 }
@@ -426,7 +407,6 @@ function CVContent() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2"><Mail className="h-3.5 w-3.5 text-gold" /><a className="hover:text-gold break-all" href="mailto:geetikagehlot2009@gmail.com">geetikagehlot2009@gmail.com</a></li>
             <li className="flex items-center gap-2"><Globe className="h-3.5 w-3.5 text-gold" /><span>438-505-9956</span></li>
-            <li className="flex items-center gap-2"><Linkedin className="h-3.5 w-3.5 text-gold" /><span className="text-xs">linkedin.com/in/geetika-gehlot</span></li>
           </ul>
         </CVSection>
 
