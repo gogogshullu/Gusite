@@ -43,7 +43,7 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "Passion for Biology · McGill Cancer Cell Lab · 2025",
     title: "",
     body: "Gel electrophoresis, Zeiss microscopy, pipetting",
-    objectPosition: "top center",
+    objectPosition: "center 20%",
   },
   {
     src: "/photo-crown.jpg",
