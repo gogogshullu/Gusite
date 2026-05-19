@@ -229,7 +229,7 @@ function CVDocumentGrid() {
           badge="PDF · A4"
           pdfUrl={LONG_CV_URL}
           icon={FileText}
-          footerMeta="Updated 2025"
+          footerMeta="UPDATED 2026"
         />
         <PDFEmbedBox
           title="Résumé"
@@ -237,7 +237,7 @@ function CVDocumentGrid() {
           badge="PDF · Letter"
           pdfUrl={RESUME_URL}
           icon={BookOpen}
-          footerMeta="Updated 2025"
+          footerMeta="UPDATED 2026"
         />
       </div>
 
