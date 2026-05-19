@@ -40,7 +40,7 @@ const HERO_SLIDES: Slide[] = [
     src: "/photo-lab-pipette2.jpg",
     alt: "Geetika with the McGill cancer cell research lab team",
     tone: "light",
-    eyebrow: "Scientist · McGill Cancer Cell Lab · March 2025",
+    eyebrow: "Science · McGill Cancer Cell Lab · March 2025",
     title: "",
     body: "Gel electrophoresis, Zeiss microscopy, pipetting",
     objectPosition: "top center",
@@ -51,7 +51,7 @@ const HERO_SLIDES: Slide[] = [
     tone: "light",
     eyebrow: "Self-Taught Junior Astronomer",
     title: "",
-    body: "Constellations & Shooting Stars",
+    body: "Constellations and Shooting Stars",
     objectPosition: "center center",
   },
   {
@@ -60,7 +60,7 @@ const HERO_SLIDES: Slide[] = [
     tone: "light",
     eyebrow: "Physicist · Jun Ye's Anna McPherson Seminar · McGill 2025",
     title: "",
-    body: "Youngest attendee at a Nobel-adjacent physics lecturar's seminar.",
+    body: "At the Anna McPherson physics seminar.",
     objectPosition: "top center",
   },
   {
@@ -69,7 +69,7 @@ const HERO_SLIDES: Slide[] = [
     tone: "light",
     eyebrow: "Engineer · FRC Team 7700",
     title: "",
-    body: "Builds, mechanicals, and teamwork in competition robotics.",
+    body: "Builds, mechanics, and teamwork in competition robotics.",
     objectPosition: "top center",
   },
 ];
