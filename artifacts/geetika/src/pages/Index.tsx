@@ -64,13 +64,13 @@ const HERO_SLIDES: Slide[] = [
     objectPosition: "top center",
   },
   {
-    src: "/photo-hen.jpg",
+    src: "/photo-henna.jpg",
     alt: "Detailed artistry",
     tone: "light",
     eyebrow: "Micro details & aesthetics",
     title: "",
     body: "Multidisciplinary Visual artist with mastery in intricate arts & designs",
-    objectPosition: "center center",
+    objectPosition: "center 28%",
 
 ];
 
