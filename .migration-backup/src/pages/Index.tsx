@@ -194,7 +194,7 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-10 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">§ 04 · The Archive</p>
+              <p className="label-gold mb-3">004 · The Archive</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
                 Five pages, <span className="font-accent text-gold">one dossier.</span>
               </h2>
@@ -268,7 +268,7 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-8 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">§ 01 · Toolkit</p>
+              <p className="label-gold mb-3">001 · Toolkit</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
                 Few of the skills I bring <span className="font-accent text-gold">to the table.</span>
               </h2>
@@ -316,7 +316,7 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-8 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">§ 02 · Showcase</p>
+              <p className="label-gold mb-3">002 · Showcase</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
                 Featured <span className="font-accent text-gold">work.</span>
               </h2>

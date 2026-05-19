@@ -55,7 +55,7 @@ function TopicCard({ topic, index, total }: { topic: TopicData; index: number; t
             <div className="absolute inset-0 flex flex-col justify-between p-10 md:p-14">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
-                  <span className="font-mono uppercase tracking-[0.35em]" style={{ fontSize: "10px", color: `${accent}99` }}>§ 01</span>
+                  <span className="font-mono uppercase tracking-[0.35em]" style={{ fontSize: "10px", color: `${accent}99` }}>001</span>
                   <span className="w-8 h-px" style={{ background: `${accent}30` }} />
                   <span className="font-mono uppercase tracking-[0.25em]" style={{ fontSize: "10px", color: `${accent}60` }}>{numLabel} / {String(total).padStart(2, "0")}</span>
                 </div>
@@ -82,7 +82,7 @@ function TopicCard({ topic, index, total }: { topic: TopicData; index: number; t
         <DialogContent className="max-w-3xl bg-[hsl(220_30%_8%)] border border-border text-paper p-0 overflow-hidden">
           <div className="p-8 md:p-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono uppercase tracking-[0.3em] text-gold/60" style={{ fontSize: "9px" }}>§ 01 · {numLabel}</span>
+              <span className="font-mono uppercase tracking-[0.3em] text-gold/60" style={{ fontSize: "9px" }}>001 · {numLabel}</span>
               <div className="flex-1 h-px bg-border/40" />
             </div>
             <DialogTitle style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 600, color: "hsl(38 40% 92%)", lineHeight: 1.1 }}>{topic.label}</DialogTitle>

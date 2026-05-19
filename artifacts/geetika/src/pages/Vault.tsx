@@ -285,9 +285,9 @@ function CVContent() {
       desc: "Led a youth cooperative team in Montréal. Participated in finance, marketing, HR, and organizational development. Helped establish co-op structure and public outreach.",
     },
     {
-      role: "Engineer & Programmer",
+      role: "Engineer",
       date: "2024 – Present",
-      org: "FIRST Robotics Competition — Team 7700",
+      org: "FIRST Robotics Competition: Team 7700",
       place: "Montréal, QC",
       desc: "Worked on robotics engineering and fabrication processes. Experience with CAD, systems thinking, fabrication workflows, and competition preparation. Exposure to robotics workshop environments and technical collaboration.",
     },
@@ -302,7 +302,7 @@ function CVContent() {
 
   const education = [
     {
-      role: "Secondary V — Expected 2026",
+      role: "Secondary V: Expected 2026",
       date: "2024 – 2026",
       org: "Westmount High School",
       place: "Montréal, QC",
@@ -326,11 +326,11 @@ function CVContent() {
 
   const certs = [
     { title: "CPR & First Aid Certified", date: "Montréal" },
-    { title: "TCS ION IntelliGem — National Winner", date: "Twice" },
-    { title: "Top Finalist — Gladrags Little Miss India", date: "" },
+    { title: "TCS ION IntelliGem: National Winner", date: "Twice" },
+    { title: "Top Finalist: Gladrags Little Miss India", date: "" },
     { title: "School President & Class Valedictorian", date: "Grades 3 & 5" },
-    { title: "SOF Olympiads, IOQM, JSO — High Rankings", date: "India" },
-    { title: "100 History & Math, 97 Science — EMSB Exams", date: "2024" },
+    { title: "SOF Olympiads, IOQM, JSO: High Rankings", date: "India" },
+    { title: "100 History & Math, 97 Science: EMSB Exams", date: "2024" },
     { title: "Participant in Gladrags Group Dance Finals", date: "" },
     { title: "National Competition Recognitions", date: "Academics & Arts" },
   ];
@@ -340,7 +340,7 @@ function CVContent() {
     "Prepared for SAT, AP Calculus BC, IIT JEE Mains & Advanced, NEET, Physics Olympiads, and Mathematics Olympiads",
     "Achieved 100 in History and Mathematics and 97 in Science on EMSB ministry examinations",
     "Winner of TCS ION IntelliGem national competition twice",
-    "Competed in SOF Olympiads, IOQM, JSO, and RMO-related mathematics and science pathways — high rankings and certificates in all",
+    "Competed in SOF Olympiads, IOQM, JSO, and RMO-related mathematics and science pathways: high rankings and certificates in all",
     "Extensive self-study in university-level physics, chemistry, biology, and mathematics beginning around age 10–11; contacts with high-tier professors in those areas",
     "Advanced independent study in quantum mechanics, relativity, supersymmetry, astrophysics, engineering and particle physics",
     "Youngest attendee at Jun Ye physics seminar; conversed with Jun Ye and Kenneth Ragan, Head of McGill's Physics Department",
@@ -366,11 +366,11 @@ function CVContent() {
   ];
 
   const musicItems = [
-    "Hindustani classical singing — guru-shishya tradition, stage performance experience, advanced vocal technique development",
+    "Hindustani classical singing: guru-shishya tradition, stage performance experience, advanced vocal technique development",
     "Electric guitar · Piano / keyboard · Self-taught advanced guitar progression",
-    "Jazz ensemble performer at Westmount High School — Grade 10 jazz concerts",
+    "Jazz ensemble performer at Westmount High School: Grade 10 jazz concerts",
     "Bharatnatyam · Rajasthani folk dance · Freestyle dance · Gymnastics-related performance · Hula hoop performance arts · Aerobics and stage choreography",
-    "FL Studio composition and sound design — DJ mixing and event performance — Rhythm experimentation and advanced rap structure design",
+    "FL Studio composition and sound design: DJ mixing and event performance: Rhythm experimentation and advanced rap structure design",
     "DaVinci Resolve video editing and colour grading",
     "Band-it Festival 2019: Level 2 participant through Furtado's School of Music",
   ];
@@ -386,7 +386,7 @@ function CVContent() {
   ];
 
   const writingItems = [
-    "Creator of Endless Portals: An Infinite Saga of Enchanted Tales — long-form fantasy and science-fiction universe with 40+ drafted chapters",
+    "Creator of Endless Portals: An Infinite Saga of Enchanted Tales: long-form fantasy and science-fiction universe with 40+ drafted chapters",
     "Focused on multiverse themes, fantasy systems, and large-scale fictional worldbuilding with interlooping plots",
     "Story architecture · Dialogue writing · Character systems · Serialized storytelling",
     "Screenwriting & Narrative Development",

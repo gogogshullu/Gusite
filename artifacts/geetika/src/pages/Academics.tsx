@@ -12,7 +12,7 @@ const Academics = () => {
     <PageShell>
       <section className="container pt-12 md:pt-16 pb-8 overflow-hidden">
         <div className="flex items-baseline gap-6 mb-8 animate-fade-in">
-          <span className="font-mono text-xs tracking-[0.3em] text-gold">§ 02</span>
+          <span className="font-mono text-xs tracking-[0.3em] text-gold">002</span>
           <span className="eyebrow text-[0.62rem] md:text-[0.62rem]">Academics</span>
           <span className="flex-1 h-px bg-border" />
         </div>

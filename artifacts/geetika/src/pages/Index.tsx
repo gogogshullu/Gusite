@@ -37,7 +37,7 @@ const HERO_SLIDES: Slide[] = [
     objectPosition: "top center",
   },
   {
-    src: "/photo-lab-team.jpg",
+    src: "/photo-lab-pipette2.jpg",
     alt: "Geetika with the McGill cancer cell research lab team",
     tone: "light",
     eyebrow: "Scientist · McGill Cancer Cell Lab · March 2025",
@@ -64,8 +64,8 @@ const HERO_SLIDES: Slide[] = [
     objectPosition: "top center",
   },
   {
-    src: "/photo-robotics-pit.jpg",
-    alt: "FRC Team 7700, competition robotics pit work",
+    src: "/photo-robotics-hub.jpg",
+    alt: "FRC Team 7700, competition robotics",
     tone: "light",
     eyebrow: "Engineer · FRC Team 7700",
     title: "",
@@ -96,35 +96,34 @@ const FEATURED: BentoItem[] = [
   {
     id: "f-frc", size: "xl", eyebrow: "Robotics",
     title: "Robotics Hub",
-    blurb: "The shop. The parts. The process.",
-    image: "/photo-robotics-pit.jpg", imagePosition: "top center", meta: "Cluster 04 · Robotics",
+    blurb: "Team 7700, Westmount High",
+    image: "/photo-robotics-hub.jpg", imagePosition: "top center", meta: "Cluster 04 · Robotics",
     detail: (
       <div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1rem" }}>
           <img src="/photo-robotics-pit.jpg" alt="Robotics Hub pit work" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
           <img src="/photo-robotics-hub.jpg" alt="Robotics Hub workshop" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
-          <img src="/photo-wie-build.jpg" alt="Robotics Hub build challenge" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
-          <img src="/photo-singappenny.jpg" alt="Robotics Hub team moment" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
+          <img src="/photo-robotics-parts.jpg" alt="Robotics Hub parts" style={{ width: "100%", borderRadius: "4px", objectFit: "contain", aspectRatio: "4/3" }} />
         </div>
-        <p>The FRC 7700 robotics room at school: butcher-block workbenches, organized hardware trays sorted by fastener type and bracket size, 7700 bumper stacks in the corner, and the drill press running most of the season.</p>
+        <p>The FRC 7700 robotics room at school: organized and sorted hardware trays, 7700 bumper stacks, and the electric saw running most of the season.</p>
       </div>
     ),
   },
   {
     id: "f-novel", size: "lg", eyebrow: "Writing",
-    title: "The Novel Cycle",
-    blurb: "A multi-book story world I've been building for years.",
+    title: "Screenwriting & Novels",
+    blurb: "Movies & the multi-book story worlds I've been building for years.",
     image: "/photo-screenplay-board.jpg", imagePosition: "center", meta: "Cluster 05 · Writing",
     detail: (
       <div>
         <img src="/photo-screenplay-board.jpg" alt="Story structure board" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
-        <p>Long-form fictional writing project: multiple interconnected narratives, structured worldbuilding, and a sustained multi-year writing output. Story structure boards map the full arc, three-act structure, character flaws, midpoint reversals, and thematic through-lines. Building since age twelve.</p>
+        <p>The fictional creative projects: with intense narratives, structured world-building, and a sustained multi-year writing output. The story structure boards shown displays the full story-arc, with a three-act structure, with character flaws, midpoint reversals, and other screenwriting elements.</p>
       </div>
     ),
   },
   {
     id: "f-vocal", size: "md", eyebrow: "Performance",
-    title: "Hindustani Vocal",
+    title: "Notable Early Performances",
     blurb: "Stage repertoire, raagas, and live performance reels.",
     image: "/photo-singing.jpg", imagePosition: "center 20%", meta: "Cluster 06 · Music",
     detail: (
@@ -138,13 +137,13 @@ const FEATURED: BentoItem[] = [
             <iframe src="https://www.youtube.com/embed/5QBuTpvBKiw" title="Rajasthani Dance Performance" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "4px", border: "none" }} allowFullScreen />
           </div>
         </div>
-        <p>Training and performance in Hindustani classical music under the guru-shishya tradition. Raga-based singing, rhythmic practice, and stage participation. Years of daily riyaaz. Also trained in Bharatnatyam and Rajasthani folk dance.</p>
+        <p>Here are few performances of Dance, Presentation and Hindustani classical music & singing, all under the guru-shishya tradition. With the raga-based singings, rhythmic practices, and stage participation. Trained in Bharatnatyam and Rajasthani folk dance.</p>
       </div>
     ),
   },
   {
     id: "f-ap", size: "md", eyebrow: "Academics",
-    title: "AP Track + Olympiads",
+    title: "Academics",
     blurb: "The transcript backing the curiosity.",
     image: "/photo-jun-ye-selfie.jpg", imagePosition: "top center", meta: "Cluster 02 · Academics",
     detail: (
@@ -155,14 +154,14 @@ const FEATURED: BentoItem[] = [
           <img src="/photo-allen-physics.jpg" alt="Allen Institute physics notes" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
           <img src="/photo-lab-microscope.jpg" alt="Cancer cell lab session" style={{ width: "100%", borderRadius: "4px", objectFit: "cover", aspectRatio: "4/3" }} />
         </div>
-        <p>AP Biology, AP Environmental Science, AP Physics C: E&amp;M and Mechanics, AP Calculus AB, AP Chemistry, AP English Literature, AP Microeconomics, AP Macroeconomics, AP Psychology — all taken within two years. Zero fails. Plus competitive olympiad training and attendance at Nobel-adjacent physics lectures.</p>
+        <p>AP Biology, AP Environmental Science, AP Physics C: E&amp;M and Mechanics, AP Calculus AB, AP Chemistry, AP English Literature, AP Microeconomics, AP Macroeconomics, AP Psychology, these were all taken within 1 year. Zero fails! Plus competitive olympiad training and attendance at Nobel-adjacent physics lectures, alongside an excellent foundation of university-level science-math taught since the age 12</p>
       </div>
     ),
   },
   {
     id: "f-acting", size: "md", eyebrow: "Screen",
-    title: "Child Artist Reel",
-    blurb: "Years on screen, in front of a camera and a microphone.",
+    title: "On Screen",
+    blurb: "Years on screen, in front of a camera and a microphone!",
     image: "/tv-altbalaji.png", imagePosition: "top center", meta: "Cluster 07 · Acting",
     detail: (
       <div>
@@ -175,20 +174,20 @@ const FEATURED: BentoItem[] = [
           <img src="/tv-altbalaji.png" alt="Alt Balaji Rhymes Series" style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
           <img src="/tv-asianpaints.png" alt="Asian Paints Eco Xpress" style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
         </div>
-        <p>Zee TV · Star Parivaar · DD Kisan · Alt Balaji · 9XM · Asian Paints · Gladrags Little Miss India Top 7. Dubbing for Veere Di Wedding & Hindi Medium. Lead roles, supporting credits, voice work, and modelling across Indian national media.</p>
+        <p>Zee TV · Star Parivaar · DD Kisan · Alt Balaji · 9XM · Asian Paints · Gladrags Little Miss India Top 7. Dubbing for Veere Di Wedding & Hindi Medium; Lead roles, supporting credits, voice work, and modelling across Indian national media.</p>
       </div>
     ),
   },
   {
     id: "f-zion", size: "md", eyebrow: "Tech",
-    title: "Zionaxelle",
+    title: "Multimedia",
     blurb: "A multimedia universe I built from scratch.",
-    image: "/photo-studio.jpg", imagePosition: "top center", meta: "Cluster 08 · Tech",
+    image: "/photo-dubbing-studio.jpg", imagePosition: "top center", meta: "Cluster 08 · Tech",
     detail: (
       <div>
         <img src="/photo-studio.jpg" alt="Studio and production setup" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
         <img src="/photo-dj-software.jpg" alt="DaVinci Resolve and production work" style={{ width: "100%", borderRadius: "4px", marginBottom: "1rem", objectFit: "cover", aspectRatio: "16/9" }} />
-        <p>Multimedia creative brand project involving design, web presence, visual identity, content strategy, and production pipeline. Self-designed from the ground up as a coherent creative universe. FL Studio since 2020, DaVinci Resolve since 2020, full-stack web development. Visit: zionaxelle.com</p>
+        <p>Dubbed in Blockbuster Bollywood Movies. Fluent in DJ-ing, FL Studio since 2020, DaVinci Resolve since 2020, full-stack web development. Multimedia creative brand project involving design, web presence, visual identity, content strategy, and production pipeline. Self-designed from the ground up as a creative outlet!</p>
       </div>
     ),
   },
@@ -282,7 +281,7 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-10 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">§ 04 · The Archive</p>
+              <p className="label-gold mb-3">004 · The Archive</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
                 Five pages, <span className="font-accent text-gold">one dossier.</span>
               </h2>
@@ -356,7 +355,7 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-8 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">§ 01 · Toolkit</p>
+              <p className="label-gold mb-3">001 · Toolkit</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
                 Few of the skills I bring <span className="font-accent text-gold">to the table.</span>
               </h2>
@@ -404,7 +403,7 @@ const Index = () => {
         <div className="container relative">
           <div className="flex items-end justify-between mb-8 gap-6 flex-wrap" data-reveal>
             <div>
-              <p className="label-gold mb-3">§ 02 · Showcase</p>
+              <p className="label-gold mb-3">002 · Showcase</p>
               <h2 className="display-xl text-3xl md:text-5xl text-ink">
                 Featured <span className="font-accent text-gold">work.</span>
               </h2>
@@ -423,9 +422,9 @@ const Index = () => {
       <section className="container py-8 md:py-10">
         <div className="grid md:grid-cols-3 gap-2">
           {[
-            { src: "/photo-gladrags-solo.jpg", label: "Observation", num: "I" },
-            { src: "/photo-ymca-event.jpg", label: "Notation", num: "II" },
-            { src: "/photo-karate.jpg", label: "Resonance", num: "III" },
+            { src: "/photo-gladrags-solo.jpg", label: "Gladrags Pageant", num: "I" },
+            { src: "/photo-ymca-event.jpg", label: "YMCA Yough Co-op, Vice President", num: "II" },
+            { src: "/photo-karate.jpg", label: "National Gold Medals in Martial Arts", num: "III" },
           ].map((x, idx) => (
             <TriptychPlate key={x.label} {...x} idx={idx} />
           ))}

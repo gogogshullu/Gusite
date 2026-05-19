@@ -20,7 +20,7 @@ const Contact = () => {
     <PageShell>
       <section className="container pt-16 md:pt-24 pb-12">
         <div className="flex items-baseline gap-6 mb-8 animate-fade-in">
-          <span className="font-mono text-xs tracking-[0.3em] text-gold">§ 05</span>
+          <span className="font-mono text-xs tracking-[0.3em] text-gold">005</span>
           <span className="eyebrow">Contact & Links</span>
           <span className="flex-1 h-px bg-border" />
         </div>

@@ -135,7 +135,7 @@ export function ScrollExpandProfile() {
                 className="font-mono text-gold/70 uppercase tracking-[0.3em]"
                 style={{ fontSize: `${lerp(8.5,11,ep)}px`, transition: "font-size 0.8s cubic-bezier(0.22,1,0.36,1)" }}
               >
-                § 01 · Personal Profile
+                001 · Personal Profile
               </span>
               <h2
                 style={{
@@ -447,7 +447,7 @@ function Essay() {
         </p>
         <div className="flex items-center gap-4 mt-10 clear-both">
           <span className="flex-1 h-px bg-border/30" />
-          <span className="font-mono text-gold/40 uppercase tracking-[0.3em]" style={{ fontSize: "8px" }}>End § 01</span>
+          <span className="font-mono text-gold/40 uppercase tracking-[0.3em]" style={{ fontSize: "8px" }}>End 001</span>
           <span className="flex-1 h-px bg-border/30" />
         </div>
       </section>

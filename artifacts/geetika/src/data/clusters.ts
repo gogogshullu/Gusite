@@ -208,8 +208,8 @@ export const CLUSTERS: Cluster[] = [
           { type: "image", src: "/photo-singappenny.jpg", caption: "Singappenny's 2025, Engineering Women Conference" },
           { type: "image", src: "/photo-mcgill-engineering.jpg", caption: "McGill Engineering, Formula Electric & Rocketry Display" },
         ]),
-      topic("Robotics Hub", "The shop. The parts. The process.",
-        "The FRC 7700 robotics room at school: butcher-block workbenches, organized hardware trays sorted by fastener type and bracket size, 7700 bumper stacks in the corner, and the drill press running most of the season.",
+      topic("Robotics Hub", "Team 7700, Westmount High",
+        "The FRC 7700 robotics room at school: organized and sorted hardware trays, 7700 bumper stacks, and the electric saw running most of the season.",
         { type: "image", src: "/photo-robotics-hub.jpg", caption: "FRC 7700 School Workshop, Build Season Hardware" },
         [
           { type: "image", src: "/photo-robotics-hub.jpg", caption: "FRC 7700 School Workshop, Build Season Hardware" },
