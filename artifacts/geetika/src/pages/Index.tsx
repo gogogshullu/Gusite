@@ -52,7 +52,7 @@ const HERO_SLIDES: Slide[] = [
     eyebrow: "School President and Female Class Valedictorian",
     title: "",
     body: "Grades 3 & 5",
-    objectPosition: "center 28%",
+    objectPosition: "center 26%",
   },
   {
     src: "/photo-rajasthani.jpg",
